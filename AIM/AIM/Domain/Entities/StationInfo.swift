@@ -12,7 +12,7 @@ struct StationInfo {
     
     let name: String
     let description: String
-    let time: Date
+    let time: String
     let duration: String
     let presenter: String
     let imageURL: URL

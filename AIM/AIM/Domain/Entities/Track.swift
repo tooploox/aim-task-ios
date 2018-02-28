@@ -22,7 +22,7 @@ struct Track {
     let title: String
     let artist: String
     let album: String
-    let playTime: Date
+    let playTime: String
     let duration: String
     let imageURL: URL
     let status: TrackStatus
