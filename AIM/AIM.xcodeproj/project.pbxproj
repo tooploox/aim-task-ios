@@ -75,7 +75,10 @@
 		B13313452046B77400D27AAE /* AIM */ = {
 			isa = PBXGroup;
 			children = (
+				B17E91B12046C2F2005FD3B0 /* Data */,
 				B13313662046B7EB00D27AAE /* Domain */,
+				B17E91B32046C304005FD3B0 /* Presentation */,
+				B17E91B62046C335005FD3B0 /* UI */,
 				B13313462046B77400D27AAE /* AppDelegate.swift */,
 				B133134D2046B77400D27AAE /* Assets.xcassets */,
 				B133134F2046B77400D27AAE /* LaunchScreen.storyboard */,
@@ -96,17 +99,94 @@
 		B13313662046B7EB00D27AAE /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				B13313672046B7F200D27AAE /* Connector */,
+				B17E91B82046C365005FD3B0 /* Entities */,
+				B17E91B92046C371005FD3B0 /* Gateway Protocols */,
+				B17E91BA2046C37C005FD3B0 /* UseCases */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
 		};
-		B13313672046B7F200D27AAE /* Connector */ = {
+		B13313672046B7F200D27AAE /* Connectors */ = {
 			isa = PBXGroup;
 			children = (
 				B13313682046B80500D27AAE /* RootConnector.swift */,
 			);
-			path = Connector;
+			path = Connectors;
+			sourceTree = "<group>";
+		};
+		B17E91B12046C2F2005FD3B0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B17E91B22046C2F9005FD3B0 /* Gateways */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B17E91B22046C2F9005FD3B0 /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Gateways;
+			sourceTree = "<group>";
+		};
+		B17E91B32046C304005FD3B0 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				B17E91B42046C319005FD3B0 /* Presenters */,
+				B17E91B52046C322005FD3B0 /* View Protocols */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		B17E91B42046C319005FD3B0 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		B17E91B52046C322005FD3B0 /* View Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Protocols";
+			sourceTree = "<group>";
+		};
+		B17E91B62046C335005FD3B0 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B13313672046B7F200D27AAE /* Connectors */,
+				B17E91B72046C344005FD3B0 /* Views */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B17E91B72046C344005FD3B0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B17E91B82046C365005FD3B0 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		B17E91B92046C371005FD3B0 /* Gateway Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Gateway Protocols";
+			sourceTree = "<group>";
+		};
+		B17E91BA2046C37C005FD3B0 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
