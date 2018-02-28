@@ -17,6 +17,9 @@
 		B17E91C02046C5D9005FD3B0 /* TrackListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E91BF2046C5D9005FD3B0 /* TrackListView.swift */; };
 		B17E91C22046C601005FD3B0 /* TrackListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E91C12046C601005FD3B0 /* TrackListViewController.swift */; };
 		B17E91C42046C65E005FD3B0 /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E91C32046C65E005FD3B0 /* UseCaseFactory.swift */; };
+		B17E91C62046C9BA005FD3B0 /* StationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E91C52046C9BA005FD3B0 /* StationInfo.swift */; };
+		B17E91C82046CA46005FD3B0 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E91C72046CA46005FD3B0 /* Track.swift */; };
+		B17E91CA2046CAE1005FD3B0 /* OnAirInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E91C92046CAE1005FD3B0 /* OnAirInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		B17E91BF2046C5D9005FD3B0 /* TrackListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListView.swift; sourceTree = "<group>"; };
 		B17E91C12046C601005FD3B0 /* TrackListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListViewController.swift; sourceTree = "<group>"; };
 		B17E91C32046C65E005FD3B0 /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
+		B17E91C52046C9BA005FD3B0 /* StationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationInfo.swift; sourceTree = "<group>"; };
+		B17E91C72046CA46005FD3B0 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		B17E91C92046CAE1005FD3B0 /* OnAirInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAirInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +191,9 @@
 		B17E91B82046C365005FD3B0 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				B17E91C92046CAE1005FD3B0 /* OnAirInfo.swift */,
+				B17E91C52046C9BA005FD3B0 /* StationInfo.swift */,
+				B17E91C72046CA46005FD3B0 /* Track.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -308,8 +317,11 @@
 			files = (
 				B17E91BE2046C577005FD3B0 /* TrackListPresenter.swift in Sources */,
 				B13313692046B80500D27AAE /* RootConnector.swift in Sources */,
+				B17E91C62046C9BA005FD3B0 /* StationInfo.swift in Sources */,
+				B17E91CA2046CAE1005FD3B0 /* OnAirInfo.swift in Sources */,
 				B17E91C22046C601005FD3B0 /* TrackListViewController.swift in Sources */,
 				B13313472046B77400D27AAE /* AppDelegate.swift in Sources */,
+				B17E91C82046CA46005FD3B0 /* Track.swift in Sources */,
 				B17E91BC2046C4E6005FD3B0 /* TrackListConnector.swift in Sources */,
 				B17E91C42046C65E005FD3B0 /* UseCaseFactory.swift in Sources */,
 				B17E91C02046C5D9005FD3B0 /* TrackListView.swift in Sources */,
