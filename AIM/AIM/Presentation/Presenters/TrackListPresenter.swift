@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class TrackListPresenter {
     
@@ -32,5 +33,14 @@ class TrackListPresenter {
     
     func configureCell(_ cell: TrackCell, at index: Int) {
         let track = onAirInfo?.tracks[index]
+    }
+    
+    func configureHeaderView(_ headerView: StationInfoView) {
+        guard let onAirInfo = onAirInfo else {
+            return
+        }
+        
+        headerView.displayName(onAirInfo.stationInfo.name)
+        headerView.displayDescription(onAirInfo.stationInfo.description)
     }
 }

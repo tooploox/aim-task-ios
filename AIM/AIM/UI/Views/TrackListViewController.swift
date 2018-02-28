@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TrackListViewController: UIViewController, UITableViewDataSource, TrackListView {
+class TrackListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TrackListView {
     
     private let presenter: TrackListPresenter
     
@@ -39,8 +39,17 @@ class TrackListViewController: UIViewController, UITableViewDataSource, TrackLis
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
         
+        tableView.delegate = self
         tableView.dataSource = self
         tableView.register(TrackCell.self)
+    }
+    
+    // MARK: - UITableViewDelegate
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = StationInfoView()
+        presenter.configureHeaderView(headerView)
+        return headerView
     }
     
     //MARK: - UITableViewDataSource
