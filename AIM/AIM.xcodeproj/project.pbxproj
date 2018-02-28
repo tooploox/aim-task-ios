@@ -12,6 +12,9 @@
 		B13313512046B77400D27AAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B133134F2046B77400D27AAE /* LaunchScreen.storyboard */; };
 		B133135C2046B77500D27AAE /* AIMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B133135B2046B77500D27AAE /* AIMTests.swift */; };
 		B13313692046B80500D27AAE /* RootConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13313682046B80500D27AAE /* RootConnector.swift */; };
+		B1386802204710D900483638 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1386801204710D900483638 /* TrackCell.swift */; };
+		B1386805204711F000483638 /* UITableView+Registering.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1386804204711F000483638 /* UITableView+Registering.swift */; };
+		B13868072047122200483638 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13868062047122200483638 /* ReusableView.swift */; };
 		B17E91BC2046C4E6005FD3B0 /* TrackListConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E91BB2046C4E6005FD3B0 /* TrackListConnector.swift */; };
 		B17E91BE2046C577005FD3B0 /* TrackListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E91BD2046C577005FD3B0 /* TrackListPresenter.swift */; };
 		B17E91C02046C5D9005FD3B0 /* TrackListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E91BF2046C5D9005FD3B0 /* TrackListView.swift */; };
@@ -42,6 +45,9 @@
 		B133135B2046B77500D27AAE /* AIMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIMTests.swift; sourceTree = "<group>"; };
 		B133135D2046B77500D27AAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B13313682046B80500D27AAE /* RootConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootConnector.swift; sourceTree = "<group>"; };
+		B1386801204710D900483638 /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
+		B1386804204711F000483638 /* UITableView+Registering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Registering.swift"; sourceTree = "<group>"; };
+		B13868062047122200483638 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		B17E91BB2046C4E6005FD3B0 /* TrackListConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListConnector.swift; sourceTree = "<group>"; };
 		B17E91BD2046C577005FD3B0 /* TrackListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListPresenter.swift; sourceTree = "<group>"; };
 		B17E91BF2046C5D9005FD3B0 /* TrackListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListView.swift; sourceTree = "<group>"; };
@@ -131,6 +137,15 @@
 			path = Connectors;
 			sourceTree = "<group>";
 		};
+		B1386803204711DA00483638 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B1386804204711F000483638 /* UITableView+Registering.swift */,
+				B13868062047122200483638 /* ReusableView.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		B17E91B12046C2F2005FD3B0 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				B13313672046B7F200D27AAE /* Connectors */,
+				B1386803204711DA00483638 /* Utilities */,
 				B17E91B72046C344005FD3B0 /* Views */,
 			);
 			path = UI;
@@ -184,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				B17E91C12046C601005FD3B0 /* TrackListViewController.swift */,
+				B1386801204710D900483638 /* TrackCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -320,7 +337,10 @@
 				B17E91C62046C9BA005FD3B0 /* StationInfo.swift in Sources */,
 				B17E91CA2046CAE1005FD3B0 /* OnAirInfo.swift in Sources */,
 				B17E91C22046C601005FD3B0 /* TrackListViewController.swift in Sources */,
+				B1386802204710D900483638 /* TrackCell.swift in Sources */,
 				B13313472046B77400D27AAE /* AppDelegate.swift in Sources */,
+				B13868072047122200483638 /* ReusableView.swift in Sources */,
+				B1386805204711F000483638 /* UITableView+Registering.swift in Sources */,
 				B17E91C82046CA46005FD3B0 /* Track.swift in Sources */,
 				B17E91BC2046C4E6005FD3B0 /* TrackListConnector.swift in Sources */,
 				B17E91C42046C65E005FD3B0 /* UseCaseFactory.swift in Sources */,
