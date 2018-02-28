@@ -12,6 +12,11 @@
 		B13313512046B77400D27AAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B133134F2046B77400D27AAE /* LaunchScreen.storyboard */; };
 		B133135C2046B77500D27AAE /* AIMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B133135B2046B77500D27AAE /* AIMTests.swift */; };
 		B13313692046B80500D27AAE /* RootConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13313682046B80500D27AAE /* RootConnector.swift */; };
+		B17E91BC2046C4E6005FD3B0 /* TrackListConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E91BB2046C4E6005FD3B0 /* TrackListConnector.swift */; };
+		B17E91BE2046C577005FD3B0 /* TrackListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E91BD2046C577005FD3B0 /* TrackListPresenter.swift */; };
+		B17E91C02046C5D9005FD3B0 /* TrackListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E91BF2046C5D9005FD3B0 /* TrackListView.swift */; };
+		B17E91C22046C601005FD3B0 /* TrackListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E91C12046C601005FD3B0 /* TrackListViewController.swift */; };
+		B17E91C42046C65E005FD3B0 /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E91C32046C65E005FD3B0 /* UseCaseFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,11 @@
 		B133135B2046B77500D27AAE /* AIMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIMTests.swift; sourceTree = "<group>"; };
 		B133135D2046B77500D27AAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B13313682046B80500D27AAE /* RootConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootConnector.swift; sourceTree = "<group>"; };
+		B17E91BB2046C4E6005FD3B0 /* TrackListConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListConnector.swift; sourceTree = "<group>"; };
+		B17E91BD2046C577005FD3B0 /* TrackListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListPresenter.swift; sourceTree = "<group>"; };
+		B17E91BF2046C5D9005FD3B0 /* TrackListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListView.swift; sourceTree = "<group>"; };
+		B17E91C12046C601005FD3B0 /* TrackListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListViewController.swift; sourceTree = "<group>"; };
+		B17E91C32046C65E005FD3B0 /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				B13313682046B80500D27AAE /* RootConnector.swift */,
+				B17E91BB2046C4E6005FD3B0 /* TrackListConnector.swift */,
 			);
 			path = Connectors;
 			sourceTree = "<group>";
@@ -141,6 +152,7 @@
 		B17E91B42046C319005FD3B0 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				B17E91BD2046C577005FD3B0 /* TrackListPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -148,6 +160,7 @@
 		B17E91B52046C322005FD3B0 /* View Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				B17E91BF2046C5D9005FD3B0 /* TrackListView.swift */,
 			);
 			path = "View Protocols";
 			sourceTree = "<group>";
@@ -164,6 +177,7 @@
 		B17E91B72046C344005FD3B0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B17E91C12046C601005FD3B0 /* TrackListViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,6 +199,7 @@
 		B17E91BA2046C37C005FD3B0 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				B17E91C32046C65E005FD3B0 /* UseCaseFactory.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -291,8 +306,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B17E91BE2046C577005FD3B0 /* TrackListPresenter.swift in Sources */,
 				B13313692046B80500D27AAE /* RootConnector.swift in Sources */,
+				B17E91C22046C601005FD3B0 /* TrackListViewController.swift in Sources */,
 				B13313472046B77400D27AAE /* AppDelegate.swift in Sources */,
+				B17E91BC2046C4E6005FD3B0 /* TrackListConnector.swift in Sources */,
+				B17E91C42046C65E005FD3B0 /* UseCaseFactory.swift in Sources */,
+				B17E91C02046C5D9005FD3B0 /* TrackListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

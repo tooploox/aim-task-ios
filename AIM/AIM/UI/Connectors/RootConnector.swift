@@ -15,12 +15,12 @@ class RootConnector {
     init(in window: UIWindow) {
         self.window = window
         
-        showEmptyView()
+        showTrackListView()
     }
     
-    private func showEmptyView() {
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = UIColor.red
+    private func showTrackListView() {
+        let connector = TrackListConnector()
+        let viewController = connector.trackListViewController()
         
         changeWindowRootViewControllerWithAnimation(
             viewController: viewController
