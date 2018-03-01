@@ -15,6 +15,32 @@ struct StationInfo {
     let time: String
     let duration: String
     let presenter: String
-    let imageURL: URL
-    let displayTime: String
+    let imageURL: URL?
+    let displayTime: String?
+}
+
+extension StationInfo {
+    
+    static func fromAttributeDict(attributeDict: [String: String]) -> StationInfo? {
+        guard
+            let name = attributeDict["name"],
+            let description = attributeDict["description"],
+            let time = attributeDict["time"],
+            let duration = attributeDict["duration"],
+            let presenter = attributeDict["presenter"]
+        else {
+            assertionFailure("Cannot parse Station Info data")
+            return nil
+        }
+        
+        return StationInfo(
+            name: name,
+            description: description,
+            time: time,
+            duration: duration,
+            presenter: presenter,
+            imageURL: nil,
+            displayTime: nil
+        )
+    }
 }

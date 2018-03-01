@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B10B3E82204834F8007E7F66 /* XMLOnAirInfoGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10B3E81204834F8007E7F66 /* XMLOnAirInfoGateway.swift */; };
 		B13313472046B77400D27AAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13313462046B77400D27AAE /* AppDelegate.swift */; };
 		B133134E2046B77400D27AAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B133134D2046B77400D27AAE /* Assets.xcassets */; };
 		B13313512046B77400D27AAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B133134F2046B77400D27AAE /* LaunchScreen.storyboard */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		808112B8C3D0BA1224308929 /* Pods_AIM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AIM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B10B3E81204834F8007E7F66 /* XMLOnAirInfoGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLOnAirInfoGateway.swift; sourceTree = "<group>"; };
 		B13313432046B77400D27AAE /* AIM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B13313462046B77400D27AAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B133134D2046B77400D27AAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 		B17E91B22046C2F9005FD3B0 /* Gateways */ = {
 			isa = PBXGroup;
 			children = (
+				B10B3E81204834F8007E7F66 /* XMLOnAirInfoGateway.swift */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				B1386805204711F000483638 /* UITableView+Registering.swift in Sources */,
 				B1386809204720EC00483638 /* StationInfoView.swift in Sources */,
 				B17E91C82046CA46005FD3B0 /* Track.swift in Sources */,
+				B10B3E82204834F8007E7F66 /* XMLOnAirInfoGateway.swift in Sources */,
 				B17E91BC2046C4E6005FD3B0 /* TrackListConnector.swift in Sources */,
 				B17E91C42046C65E005FD3B0 /* UseCaseFactory.swift in Sources */,
 				B17E91C02046C5D9005FD3B0 /* TrackListView.swift in Sources */,

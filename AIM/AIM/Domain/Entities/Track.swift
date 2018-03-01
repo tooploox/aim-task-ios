@@ -24,7 +24,57 @@ struct Track {
     let album: String
     let playTime: String
     let duration: String
-    let imageURL: URL
+    let imageURL: URL?
     let status: TrackStatus
     let type: TrackType
+}
+
+extension Track {
+    
+    static func fromAttributeDict(attributeDict: [String: String]) -> Track? {
+        guard
+            let title = attributeDict["title"],
+            let artist = attributeDict["artist"],
+            let album = attributeDict["album"],
+            let playTime = attributeDict["time"],
+            let duration = attributeDict["duration"],
+            let imageURLString = attributeDict["imageUrl"],
+            let statusString = attributeDict["status"],
+            let typeString = attributeDict["type"]
+        else {
+            assertionFailure("Cannot parse Track data")
+            return nil
+        }
+        
+        var status: TrackStatus
+        switch statusString {
+            case "history":
+                status = .history
+            case "playing":
+                status = .playing
+            default:
+                assertionFailure("Cannot parse Track data")
+                return nil
+        }
+        
+        var type: TrackType
+        switch typeString {
+            case "song":
+                type = .song
+            default:
+                assertionFailure("Cannot parse Track data")
+                return nil
+        }
+        
+        return Track(
+            title: title,
+            artist: artist,
+            album: album,
+            playTime: playTime,
+            duration: duration,
+            imageURL: URL(string: imageURLString),
+            status: status,
+            type: type
+        )
+    }
 }

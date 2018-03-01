@@ -15,6 +15,9 @@ class RootConnector {
     init(in window: UIWindow) {
         self.window = window
         
+        let gateway = XMLOnAirInfoGateway()
+        gateway.parse()
+        
         showTrackListView()
     }
     

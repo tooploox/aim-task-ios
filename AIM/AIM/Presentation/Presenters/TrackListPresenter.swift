@@ -37,8 +37,10 @@ class TrackListPresenter {
         }
         
         let track = onAirInfo.tracks[index]
-                
-        cell.displayImage(track.imageURL)
+        
+        if let imageURL = track.imageURL {
+            cell.displayImage(imageURL)
+        }
         cell.displayTitle(track.title)
         cell.displayArtist(track.artist)
         cell.displayDuration(track.duration)
@@ -49,7 +51,9 @@ class TrackListPresenter {
             return
         }
         
-        headerView.displayImage(onAirInfo.stationInfo.imageURL)
+        if let imageURL = onAirInfo.stationInfo.imageURL {
+            headerView.displayImage(imageURL)
+        }
         headerView.displayName(onAirInfo.stationInfo.name)
         headerView.displayDescription(onAirInfo.stationInfo.description)
     }
