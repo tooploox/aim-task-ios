@@ -14,6 +14,8 @@ class TrackListViewController: UIViewController, UITableViewDelegate, UITableVie
     
     private let tableView = UITableView()
     
+    private let rowHeight: CGFloat = 90.0
+    
     init(presenter: TrackListPresenter) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
@@ -29,22 +31,27 @@ class TrackListViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     private func setupTableView() {
-        view.addSubview(tableView)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
+        view.addSubview(tableView, with: [
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
         
-        tableView.delegate = self
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.register(TrackCell.self)
     }
     
     // MARK: - UITableViewDelegate
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return rowHeight
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return rowHeight
+    }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = StationInfoView()
@@ -65,7 +72,6 @@ class TrackListViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: TrackCell = tableView.dequeueReusableCell(for: indexPath)
         presenter.configureCell(cell, at: indexPath.row)
-
         return cell
     }
 }

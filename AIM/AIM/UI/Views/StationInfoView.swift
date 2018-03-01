@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class StationInfoView: UIView {
     
@@ -42,18 +43,17 @@ class StationInfoView: UIView {
     
     private func setupImageView() {
         addSubview(imageView, with: [
-            imageView.topAnchor.constraint(equalTo: topAnchor),
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            imageView.heightAnchor.constraint(equalToConstant: 44.0),
-            imageView.widthAnchor.constraint(equalToConstant: 44.0)
+            imageView.topAnchor.constraint(equalTo: topAnchor, constant: 5.0),
+            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5.0),
+            imageView.heightAnchor.constraint(equalToConstant: 80.0),
+            imageView.widthAnchor.constraint(equalToConstant: 80.0)
         ])
     }
     
     private func setupNameLabel() {
         addSubview(nameLabel, with: [
             nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 5.0),
-            nameLabel.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 10.0),
-            nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor)
+            nameLabel.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 10.0)
         ])
     }
     
@@ -61,12 +61,15 @@ class StationInfoView: UIView {
         addSubview(descriptionLabel, with: [
             descriptionLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 10.0),
             descriptionLabel.leadingAnchor.constraint(equalTo: nameLabel.leadingAnchor),
-            descriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor)
+            descriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5.0),
+            descriptionLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5.0)
         ])
+        
+        descriptionLabel.numberOfLines = 0
     }
     
-    func displayImage(_ image: UIImage) {
-        imageView.image = image
+    func displayImage(_ URL: URL) {
+        imageView.kf.setImage(with: URL)
     }
     
     func displayName(_ name: String) {

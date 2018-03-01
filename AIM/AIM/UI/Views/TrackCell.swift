@@ -7,15 +7,92 @@
 //
 
 import UIKit
+import Kingfisher
 
 class TrackCell: UITableViewCell {
+    
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
+    private let artistLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
+    private let coverImageView: UIImageView = {
+        let imageView = UIImageView()
+        return imageView
+    }()
+    
+    private let durationLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         selectionStyle = .none
+        setupView()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setupView() {
+        setupCoverImageView()
+        setupTitleLabel()
+        setupArtistLabel()
+        setupDurationLabel()
+    }
+    
+    private func setupCoverImageView() {
+        contentView.addSubview(coverImageView, with: [
+            coverImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5.0),
+            coverImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5.0),
+            coverImageView.heightAnchor.constraint(equalToConstant: 80.0),
+            coverImageView.widthAnchor.constraint(equalToConstant: 80.0)
+        ])
+    }
+    
+    private func setupTitleLabel() {
+        contentView.addSubview(titleLabel, with: [
+            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5.0),
+            titleLabel.leadingAnchor.constraint(equalTo: coverImageView.trailingAnchor, constant: 10.0)
+        ])
+    }
+    
+    private func setupArtistLabel() {
+        contentView.addSubview(artistLabel, with: [
+            artistLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10.0),
+            artistLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
+            artistLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -5.0),
+            artistLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5.0)
+        ])
+    }
+    
+    private func setupDurationLabel() {
+        contentView.addSubview(durationLabel, with: [
+            durationLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -5.0),
+            durationLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5.0)
+        ])
+    }
+    
+    func displayImage(_ URL: URL) {
+        coverImageView.kf.setImage(with: URL)
+    }
+    
+    func displayTitle(_ title: String) {
+        titleLabel.text = title
+    }
+    
+    func displayArtist(_ artist: String) {
+        artistLabel.text = artist
+    }
+    
+    func displayDuration(_ duration: String) {
+        durationLabel.text = duration
     }
 }

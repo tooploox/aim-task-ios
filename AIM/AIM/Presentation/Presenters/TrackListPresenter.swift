@@ -27,12 +27,21 @@ class TrackListPresenter {
         guard let onAirInfo = onAirInfo else {
             return 0
         }
-        
+
         return onAirInfo.tracks.count
     }
     
     func configureCell(_ cell: TrackCell, at index: Int) {
-        let track = onAirInfo?.tracks[index]
+        guard let onAirInfo = onAirInfo else {
+            return
+        }
+        
+        let track = onAirInfo.tracks[index]
+                
+        cell.displayImage(track.imageURL)
+        cell.displayTitle(track.title)
+        cell.displayArtist(track.artist)
+        cell.displayDuration(track.duration)
     }
     
     func configureHeaderView(_ headerView: StationInfoView) {
@@ -40,6 +49,7 @@ class TrackListPresenter {
             return
         }
         
+        headerView.displayImage(onAirInfo.stationInfo.imageURL)
         headerView.displayName(onAirInfo.stationInfo.name)
         headerView.displayDescription(onAirInfo.stationInfo.description)
     }
