@@ -8,6 +8,6 @@
 
 struct OnAirInfo {
     
-    let stationInfo: StationInfo
+    let stationInfo: StationInfo?
     let tracks: [Track]
 }

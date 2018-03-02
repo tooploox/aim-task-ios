@@ -68,6 +68,8 @@ class XMLOnAirInfoGateway: NSObject, XMLParserDelegate {
             let stationDisplayTime = stationDisplayTime,
             let stationImageURL = stationImageURL
         else {
+            let onAirInfo = OnAirInfo(stationInfo: nil, tracks: tracks)
+            parserCompletion?(onAirInfo)
             return
         }
                 

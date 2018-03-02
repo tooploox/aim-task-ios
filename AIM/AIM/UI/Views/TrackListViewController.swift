@@ -51,10 +51,18 @@ class TrackListViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        guard let _ = presenter.onAirInfo?.stationInfo else {
+            return 0.0
+        }
+        
         return rowHeight
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let _ = presenter.onAirInfo?.stationInfo else {
+            return nil
+        }
+        
         let headerView = StationInfoView()
         presenter.configureHeaderView(headerView)
         return headerView

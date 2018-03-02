@@ -16,7 +16,7 @@ class TrackListPresenter {
     private let connector: TrackListConnector
     private let useCaseFactory: UseCaseProducing
     
-    private var onAirInfo: OnAirInfo?
+    var onAirInfo: OnAirInfo?
     
     init(connector: TrackListConnector, useCaseFactory: UseCaseProducing) {
         self.connector = connector
@@ -47,15 +47,18 @@ class TrackListPresenter {
     }
     
     func configureHeaderView(_ headerView: StationInfoView) {
-        guard let onAirInfo = onAirInfo else {
+        guard
+            let onAirInfo = onAirInfo,
+            let stationInfo = onAirInfo.stationInfo
+        else {
             return
         }
         
-        if let imageURL = onAirInfo.stationInfo.imageURL {
+        if let imageURL = stationInfo.imageURL {
             headerView.displayImage(imageURL)
         }
-        headerView.displayName(onAirInfo.stationInfo.name)
-        headerView.displayDescription(onAirInfo.stationInfo.description)
+        headerView.displayName(stationInfo.name)
+        headerView.displayDescription(stationInfo.description)
     }
     
     func viewReady() {
