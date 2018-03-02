@@ -15,8 +15,8 @@ struct StationInfo {
     let time: String
     let duration: String
     let presenter: String
-    let imageURL: URL?
     let displayTime: String?
+    let imageURL: URL?
 }
 
 extension StationInfo {
@@ -39,8 +39,8 @@ extension StationInfo {
             time: time,
             duration: duration,
             presenter: presenter,
-            imageURL: nil,
-            displayTime: nil
+            displayTime: nil,
+            imageURL: nil
         )
     }
 }

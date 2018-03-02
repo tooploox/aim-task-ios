@@ -10,8 +10,14 @@ import UIKit
 
 class TrackListConnector {
     
+    private let useCaseFactory: UseCaseProducing
+    
+    init(useCaseFactory: UseCaseProducing) {
+        self.useCaseFactory = useCaseFactory
+    }
+    
     func trackListViewController() -> UIViewController {
-        let presenter = TrackListPresenter(connector: self, useCaseFactory: UseCaseFactory())
+        let presenter = TrackListPresenter(connector: self, useCaseFactory: useCaseFactory)
         let viewController = TrackListViewController(presenter: presenter)
         presenter.view = viewController
         

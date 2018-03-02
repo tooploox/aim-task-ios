@@ -15,14 +15,13 @@ class RootConnector {
     init(in window: UIWindow) {
         self.window = window
         
-        let gateway = XMLOnAirInfoGateway()
-        gateway.parse()
-        
         showTrackListView()
     }
     
     private func showTrackListView() {
-        let connector = TrackListConnector()
+        let connector = TrackListConnector(
+            useCaseFactory: UseCaseFactory(onAirInfoGateway: XMLOnAirInfoGateway())
+        )
         let viewController = connector.trackListViewController()
         
         changeWindowRootViewControllerWithAnimation(

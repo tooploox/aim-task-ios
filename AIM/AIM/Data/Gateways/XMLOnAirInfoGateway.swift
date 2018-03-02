@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias OnAirInfoCompletion = (OnAirInfo) -> ()
+
 class XMLOnAirInfoGateway: NSObject, XMLParserDelegate {
     
     private let onAirInfoFeedURL = URL(string: "http://aim.appdata.abc.net.au.edgesuite.net/data/abc/triplej/onair.xml")!
@@ -19,13 +21,16 @@ class XMLOnAirInfoGateway: NSObject, XMLParserDelegate {
     private var tracks = [Track]()
     private var track: Track?
     
+    private var parserCompletion: OnAirInfoCompletion?
+    
     override init() {
         self.parser = XMLParser(contentsOf: onAirInfoFeedURL)!
         super.init()
         parser.delegate = self
     }
     
-    func parse() {
+    func parse(completion: @escaping OnAirInfoCompletion) {
+        parserCompletion = completion
         parser.parse()
     }
     
@@ -35,11 +40,13 @@ class XMLOnAirInfoGateway: NSObject, XMLParserDelegate {
         if elementName == "epgItem" {
             stationInfo = StationInfo.fromAttributeDict(attributeDict: attributeDict)
         } else if elementName == "customField" {
-            if let displayTime = attributeDict["displayTime"] {
-                stationDisplayTime = displayTime
-            } else if let imageURLString = attributeDict["image320"] {
-                if let imageURL = URL(string: imageURLString) {
-                    stationImageURL = imageURL
+            if let attributeName = attributeDict["name"] {
+                if attributeName == "displayTime" {
+                    stationDisplayTime = attributeDict["value"]
+                } else if attributeName == "image320" {
+                    if let imageURLString = attributeDict["value"], let imageURL = URL(string: imageURLString) {
+                        stationImageURL = imageURL
+                    }
                 }
             }
         } else if elementName == "playoutItem" {
@@ -63,7 +70,7 @@ class XMLOnAirInfoGateway: NSObject, XMLParserDelegate {
         else {
             return
         }
-        
+                
         let onAirInfo = OnAirInfo(
             stationInfo:
                 StationInfo(
@@ -72,11 +79,11 @@ class XMLOnAirInfoGateway: NSObject, XMLParserDelegate {
                     time: stationInfo.time,
                     duration: stationInfo.duration,
                     presenter: stationInfo.presenter,
-                    imageURL: stationImageURL,
-                    displayTime: stationDisplayTime
+                    displayTime: stationDisplayTime,
+                    imageURL: stationImageURL
                 ),
             tracks: tracks
         )
-        // return onAirInfo
+        parserCompletion?(onAirInfo)
     }
 }

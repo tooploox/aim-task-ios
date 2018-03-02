@@ -6,4 +6,6 @@
 //  Copyright © 2018 Oskar Szydlowski. All rights reserved.
 //
 
-protocol TrackListView: class { }
+protocol TrackListView: class {
+    func refreshView()
+}

@@ -28,6 +28,7 @@ class TrackListViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        presenter.viewReady()
     }
     
     private func setupTableView() {
@@ -73,5 +74,11 @@ class TrackListViewController: UIViewController, UITableViewDelegate, UITableVie
         let cell: TrackCell = tableView.dequeueReusableCell(for: indexPath)
         presenter.configureCell(cell, at: indexPath.row)
         return cell
+    }
+    
+    // MARK: - TrackListView
+    
+    func refreshView() {
+        tableView.reloadData()
     }
 }

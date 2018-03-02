@@ -6,6 +6,19 @@
 //  Copyright © 2018 Oskar Szydlowski. All rights reserved.
 //
 
-protocol UseCaseProducing: class { }
+protocol UseCaseProducing: class {
+    func getOnAirInfoUseCase(completion: @escaping OnAirInfoCompletion) -> GetOnAirInfoUseCase
+}
 
-class UseCaseFactory: UseCaseProducing { }
+class UseCaseFactory: UseCaseProducing {
+    
+    let onAirInfoGateway: XMLOnAirInfoGateway
+    
+    init(onAirInfoGateway: XMLOnAirInfoGateway) {
+        self.onAirInfoGateway = onAirInfoGateway
+    }
+    
+    func getOnAirInfoUseCase(completion: @escaping OnAirInfoCompletion) -> GetOnAirInfoUseCase {
+        return GetOnAirInfoUseCase(gateway: onAirInfoGateway, completion: completion)
+    }
+}

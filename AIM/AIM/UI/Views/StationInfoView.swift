@@ -36,6 +36,7 @@ class StationInfoView: UIView {
     }
     
     private func setupView() {
+        backgroundColor = UIColor.white
         setupImageView()
         setupNameLabel()
         setupDescriptionLabel()
