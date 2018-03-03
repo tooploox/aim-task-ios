@@ -6,7 +6,6 @@
 //  Copyright © 2018 Oskar Szydlowski. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class TrackListPresenter {
@@ -61,10 +60,12 @@ class TrackListPresenter {
         headerView.displayDescription(stationInfo.description)
     }
     
-    func viewReady() {
+    func fetchOnAirInfo() {
         useCaseFactory.getOnAirInfoUseCase { [weak self] onAirInfo in
-            self?.onAirInfo = onAirInfo
-            self?.view?.refreshView()
+            DispatchQueue.main.async {
+                self?.onAirInfo = onAirInfo
+                self?.view?.refreshView()
+            }
         }.execute()
     }
 }

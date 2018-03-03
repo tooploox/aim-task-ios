@@ -28,7 +28,7 @@ class TrackListViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        presenter.viewReady()
+        fetchOnAirInfo()
     }
     
     private func setupTableView() {
@@ -41,7 +41,7 @@ class TrackListViewController: UIViewController, UITableViewDelegate, UITableVie
         
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(TrackCell.self)
+        tableView.register(TrackCell.self)        
     }
     
     // MARK: - UITableViewDelegate
@@ -88,5 +88,9 @@ class TrackListViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func refreshView() {
         tableView.reloadData()
+    }
+    
+    @objc private func fetchOnAirInfo() {
+        presenter.fetchOnAirInfo()
     }
 }

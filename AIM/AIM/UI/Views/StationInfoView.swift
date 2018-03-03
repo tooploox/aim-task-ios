@@ -11,19 +11,13 @@ import Kingfisher
 
 class StationInfoView: UIView {
     
-    private let nameLabel: UILabel = {
-       let label = UILabel()
-        return label
-    }()
-    
-    private let descriptionLabel: UILabel = {
-        let label = UILabel()
-        return label
-    }()
-    
-    private let imageView: UIImageView = {
-        let imageView = UIImageView()
-        return imageView
+    private let nameLabel = UILabel()
+    private let descriptionLabel = UILabel()
+    private let imageView = UIImageView()
+    private let separator: UIView = {
+        let separator = UIView()
+        separator.backgroundColor = UIColor.gray
+        return separator
     }()
     
     override init(frame: CGRect) {
@@ -37,9 +31,19 @@ class StationInfoView: UIView {
     
     private func setupView() {
         backgroundColor = UIColor.white
+        setupSeparator()
         setupImageView()
         setupNameLabel()
         setupDescriptionLabel()
+    }
+    
+    private func setupSeparator() {
+        addSubview(separator, with: [
+            separator.leadingAnchor.constraint(equalTo: leadingAnchor),
+            separator.trailingAnchor.constraint(equalTo: trailingAnchor),
+            separator.bottomAnchor.constraint(equalTo: bottomAnchor),
+            separator.heightAnchor.constraint(equalToConstant: 5.0)
+        ])
     }
     
     private func setupImageView() {
@@ -63,7 +67,7 @@ class StationInfoView: UIView {
             descriptionLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 10.0),
             descriptionLabel.leadingAnchor.constraint(equalTo: nameLabel.leadingAnchor),
             descriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5.0),
-            descriptionLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5.0)
+            descriptionLabel.bottomAnchor.constraint(equalTo: separator.topAnchor)
         ])
         
         descriptionLabel.numberOfLines = 0

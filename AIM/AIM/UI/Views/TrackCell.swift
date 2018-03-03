@@ -13,23 +13,16 @@ class TrackCell: UITableViewCell {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
+        label.textColor = UIColor.brown
         return label
     }()
-    
-    private let artistLabel: UILabel = {
-        let label = UILabel()
-        return label
-    }()
-    
+    private let artistLabel = UILabel()
     private let coverImageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.backgroundColor = UIColor.lightGray
         return imageView
     }()
-    
-    private let durationLabel: UILabel = {
-        let label = UILabel()
-        return label
-    }()
+    private let durationLabel = UILabel()
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -60,16 +53,16 @@ class TrackCell: UITableViewCell {
     private func setupTitleLabel() {
         contentView.addSubview(titleLabel, with: [
             titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5.0),
-            titleLabel.leadingAnchor.constraint(equalTo: coverImageView.trailingAnchor, constant: 10.0)
+            titleLabel.leadingAnchor.constraint(equalTo: coverImageView.trailingAnchor, constant: 10.0),
+            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -5.0)
         ])
     }
     
     private func setupArtistLabel() {
         contentView.addSubview(artistLabel, with: [
-            artistLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10.0),
+            artistLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5.0),
             artistLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
-            artistLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -5.0),
-            artistLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5.0)
+            artistLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -5.0)
         ])
     }
     
