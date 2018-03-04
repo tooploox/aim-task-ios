@@ -20,7 +20,6 @@
 		B138680B204721EB00483638 /* UIView+AddSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B138680A204721EB00483638 /* UIView+AddSubview.swift */; };
 		B17E91BC2046C4E6005FD3B0 /* TrackListConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E91BB2046C4E6005FD3B0 /* TrackListConnector.swift */; };
 		B17E91BE2046C577005FD3B0 /* TrackListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E91BD2046C577005FD3B0 /* TrackListPresenter.swift */; };
-		B17E91C02046C5D9005FD3B0 /* TrackListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E91BF2046C5D9005FD3B0 /* TrackListView.swift */; };
 		B17E91C22046C601005FD3B0 /* TrackListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E91C12046C601005FD3B0 /* TrackListViewController.swift */; };
 		B17E91C42046C65E005FD3B0 /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E91C32046C65E005FD3B0 /* UseCaseFactory.swift */; };
 		B17E91C62046C9BA005FD3B0 /* StationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E91C52046C9BA005FD3B0 /* StationInfo.swift */; };
@@ -45,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		808112B8C3D0BA1224308929 /* Pods_AIM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AIM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1043338204C407800165A68 /* TrackListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrackListView.h; sourceTree = "<group>"; };
 		B10B3E81204834F8007E7F66 /* XMLOnAirInfoGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLOnAirInfoGateway.swift; sourceTree = "<group>"; };
 		B13313432046B77400D27AAE /* AIM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B13313462046B77400D27AAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,7 +62,6 @@
 		B138680A204721EB00483638 /* UIView+AddSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddSubview.swift"; sourceTree = "<group>"; };
 		B17E91BB2046C4E6005FD3B0 /* TrackListConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListConnector.swift; sourceTree = "<group>"; };
 		B17E91BD2046C577005FD3B0 /* TrackListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListPresenter.swift; sourceTree = "<group>"; };
-		B17E91BF2046C5D9005FD3B0 /* TrackListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListView.swift; sourceTree = "<group>"; };
 		B17E91C12046C601005FD3B0 /* TrackListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListViewController.swift; sourceTree = "<group>"; };
 		B17E91C32046C65E005FD3B0 /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
 		B17E91C52046C9BA005FD3B0 /* StationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationInfo.swift; sourceTree = "<group>"; };
@@ -216,7 +215,7 @@
 		B17E91B52046C322005FD3B0 /* View Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				B17E91BF2046C5D9005FD3B0 /* TrackListView.swift */,
+				B1043338204C407800165A68 /* TrackListView.h */,
 			);
 			path = "View Protocols";
 			sourceTree = "<group>";
@@ -454,7 +453,6 @@
 				B17E91BC2046C4E6005FD3B0 /* TrackListConnector.swift in Sources */,
 				B17E91C42046C65E005FD3B0 /* UseCaseFactory.swift in Sources */,
 				B1FAA609204C217300FACBA5 /* StationInfo.m in Sources */,
-				B17E91C02046C5D9005FD3B0 /* TrackListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
