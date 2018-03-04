@@ -9,5 +9,4 @@
 #import "StationInfo.h"
 
 @implementation StationInfo
-
 @end
