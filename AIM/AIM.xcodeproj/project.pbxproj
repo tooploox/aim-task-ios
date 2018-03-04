@@ -27,8 +27,9 @@
 		B17E91C82046CA46005FD3B0 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E91C72046CA46005FD3B0 /* Track.swift */; };
 		B17E91CA2046CAE1005FD3B0 /* OnAirInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E91C92046CAE1005FD3B0 /* OnAirInfo.swift */; };
 		B189B6402049681F00A6246A /* GetOnAirInfoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B189B63F2049681F00A6246A /* GetOnAirInfoUseCase.swift */; };
-		B1FAA603204C1FEF00FACBA5 /* OnAirInfo.h in Sources */ = {isa = PBXBuildFile; fileRef = B1A70EB3204AA14500A759A6 /* OnAirInfo.h */; };
 		B1FAA606204C20C600FACBA5 /* OnAirInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FAA605204C20C600FACBA5 /* OnAirInfo.m */; };
+		B1FAA609204C217300FACBA5 /* StationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FAA608204C217300FACBA5 /* StationInfo.m */; };
+		B1FAA60C204C225300FACBA5 /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FAA60B204C225300FACBA5 /* Track.m */; };
 		D4092818840E7DF0515F23F6 /* Pods_AIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808112B8C3D0BA1224308929 /* Pods_AIM.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,10 @@
 		B1A70EB3204AA14500A759A6 /* OnAirInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnAirInfo.h; sourceTree = "<group>"; };
 		B1FAA604204C20C600FACBA5 /* AIM-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AIM-Bridging-Header.h"; sourceTree = "<group>"; };
 		B1FAA605204C20C600FACBA5 /* OnAirInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OnAirInfo.m; sourceTree = "<group>"; };
+		B1FAA607204C217300FACBA5 /* StationInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StationInfo.h; sourceTree = "<group>"; };
+		B1FAA608204C217300FACBA5 /* StationInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StationInfo.m; sourceTree = "<group>"; };
+		B1FAA60A204C225300FACBA5 /* Track.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Track.h; sourceTree = "<group>"; };
+		B1FAA60B204C225300FACBA5 /* Track.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Track.m; sourceTree = "<group>"; };
 		B720BCC55E1D9D3C04D7CC63 /* Pods-AIM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AIM/Pods-AIM.debug.xcconfig"; sourceTree = "<group>"; };
 		F11410BEFA37E9267C26B8D5 /* Pods-AIM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIM.release.xcconfig"; path = "Pods/Target Support Files/Pods-AIM/Pods-AIM.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -244,6 +249,10 @@
 				B17E91C72046CA46005FD3B0 /* Track.swift */,
 				B1A70EB3204AA14500A759A6 /* OnAirInfo.h */,
 				B1FAA605204C20C600FACBA5 /* OnAirInfo.m */,
+				B1FAA607204C217300FACBA5 /* StationInfo.h */,
+				B1FAA608204C217300FACBA5 /* StationInfo.m */,
+				B1FAA60A204C225300FACBA5 /* Track.h */,
+				B1FAA60B204C225300FACBA5 /* Track.m */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -426,7 +435,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1FAA603204C1FEF00FACBA5 /* OnAirInfo.h in Sources */,
+				B1FAA60C204C225300FACBA5 /* Track.m in Sources */,
 				B17E91BE2046C577005FD3B0 /* TrackListPresenter.swift in Sources */,
 				B1FAA606204C20C600FACBA5 /* OnAirInfo.m in Sources */,
 				B13313692046B80500D27AAE /* RootConnector.swift in Sources */,
@@ -444,6 +453,7 @@
 				B10B3E82204834F8007E7F66 /* XMLOnAirInfoGateway.swift in Sources */,
 				B17E91BC2046C4E6005FD3B0 /* TrackListConnector.swift in Sources */,
 				B17E91C42046C65E005FD3B0 /* UseCaseFactory.swift in Sources */,
+				B1FAA609204C217300FACBA5 /* StationInfo.m in Sources */,
 				B17E91C02046C5D9005FD3B0 /* TrackListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
