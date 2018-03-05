@@ -61,7 +61,7 @@ class TrackListPresenter {
     }
     
     func shouldDisplayHeader() -> Bool {
-        return onAirInfo != nil
+        return onAirInfo?.stationInfo != nil
     }
     
     func fetchOnAirInfo() {
