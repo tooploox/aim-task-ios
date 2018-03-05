@@ -9,7 +9,7 @@
 #import "TrackCell.h"
 #import <UIKit/UIKit.h>
 
-@interface TrackCells () {
+@interface TrackCell () {
     
     UILabel *titleLabel;
     UILabel *artistLabel;
@@ -21,7 +21,7 @@
 
 @end
 
-@implementation TrackCells
+@implementation TrackCell
 
 -(id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -32,7 +32,7 @@
 
 -(void)prepareForReuse {
     [super prepareForReuse];
-    //cancel cover image task
+    //cancel cover image task         coverImageTask?.cancel()
     coverImageView = nil;
     titleLabel.text = nil;
     artistLabel.text = nil;
@@ -40,10 +40,10 @@
 }
 
 -(void)setupView {
-    [self setupCoverImageView];
-    [self setupTitleLabel];
-    [self setupArtistLabel];
-    [self setupDurationLabel];
+//    [self setupCoverImageView];
+//    [self setupTitleLabel];
+//    [self setupArtistLabel];
+//    [self setupDurationLabel];
 }
 
 -(void)setupCoverImageView {
@@ -87,7 +87,7 @@
 }
 
 - (void) displayImage: (NSURL *) URL {
-    // set image
+    // set image         coverImageTask = coverImageView.setImage(with: URL)
 }
 
 - (void) displayTitle: (NSString *) title {

@@ -1,5 +1,5 @@
 //
-//  TrackCell.h
+//  StationInfoView.h
 //  AIM
 //
 //  Created by Oskar Szydlowski on 05.03.2018.
@@ -9,11 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface TrackCell : UITableViewCell {}
+@interface StationInfoView : UIView {}
 
 - (void) displayImage: (NSURL *) URL;
-- (void) displayTitle: (NSString *) title;
-- (void) displayArtist: (NSString *) artist;
-- (void) displayDuration: (NSString *) duration;
+- (void) displayName: (NSString *) name;
+- (void) displayDescription: (NSString *) description;
 
 @end
