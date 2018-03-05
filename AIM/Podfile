@@ -1,0 +1,5 @@
+target 'AIM' do
+  pod 'Kingfisher'
+end
+
+use_frameworks!
