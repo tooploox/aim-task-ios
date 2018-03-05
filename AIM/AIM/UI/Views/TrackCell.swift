@@ -36,6 +36,7 @@ class TrackCell: UITableViewCell {
     }
     
     override func prepareForReuse() {
+        super.prepareForReuse()
         coverImageTask?.cancel()
         coverImageView.image = nil
         titleLabel.text = ""
