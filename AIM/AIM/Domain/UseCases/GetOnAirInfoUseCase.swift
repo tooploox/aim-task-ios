@@ -8,15 +8,15 @@
 
 class GetOnAirInfoUseCase {
     
-    private let gateway: XMLOnAirInfoGateway
+    private let gateway: OnAirInfoGateway
     private let completion: OnAirInfoCompletion
     
-    init(gateway: XMLOnAirInfoGateway, completion: @escaping OnAirInfoCompletion) {
+    init(gateway: OnAirInfoGateway, completion: @escaping OnAirInfoCompletion) {
         self.gateway = gateway
         self.completion = completion
     }
     
     func execute() {
-        gateway.parse(completion: completion)
+        gateway.fetchOnAirInfo(completion: completion)
     }
 }

@@ -15,7 +15,7 @@ class TrackListPresenter {
     private let connector: TrackListConnector
     private let useCaseFactory: UseCaseProducing
     
-    var onAirInfo: OnAirInfo?
+    private var onAirInfo: OnAirInfo?
     
     init(connector: TrackListConnector, useCaseFactory: UseCaseProducing) {
         self.connector = connector
@@ -58,6 +58,10 @@ class TrackListPresenter {
         }
         headerView.displayName(stationInfo.name)
         headerView.displayDescription(stationInfo.description)
+    }
+    
+    func shouldDisplayHeader() -> Bool {
+        return onAirInfo != nil
     }
     
     func fetchOnAirInfo() {

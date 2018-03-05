@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Kingfisher
 
 class TrackCell: UITableViewCell {
     
@@ -24,6 +23,8 @@ class TrackCell: UITableViewCell {
     }()
     private let durationLabel = UILabel()
     
+    private var coverImageTask: ImageTask?
+    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         selectionStyle = .none
@@ -32,6 +33,15 @@ class TrackCell: UITableViewCell {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        coverImageTask?.cancel()
+        coverImageView.image = nil
+        titleLabel.text = ""
+        artistLabel.text = ""
+        durationLabel.text = ""
     }
     
     private func setupView() {
@@ -74,7 +84,7 @@ class TrackCell: UITableViewCell {
     }
     
     func displayImage(_ URL: URL) {
-        coverImageView.kf.setImage(with: URL)
+        coverImageTask = coverImageView.setImage(with: URL)
     }
     
     func displayTitle(_ title: String) {
