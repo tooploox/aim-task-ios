@@ -51,21 +51,17 @@ class TrackListViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        guard let _ = presenter.onAirInfo?.stationInfo else {
-            return 0.0
-        }
-        
-        return rowHeight
+        return presenter.shouldDisplayHeader() ? rowHeight : 0.0
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let _ = presenter.onAirInfo?.stationInfo else {
-            return nil
+        if presenter.shouldDisplayHeader() {
+            let headerView = StationInfoView()
+            presenter.configureHeaderView(headerView)
+            return headerView
         }
-        
-        let headerView = StationInfoView()
-        presenter.configureHeaderView(headerView)
-        return headerView
+
+        return nil
     }
     
     //MARK: - UITableViewDataSource
