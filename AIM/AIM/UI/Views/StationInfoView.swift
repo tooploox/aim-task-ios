@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Kingfisher
 
 class StationInfoView: UIView {
     
@@ -74,7 +73,7 @@ class StationInfoView: UIView {
     }
     
     func displayImage(_ URL: URL) {
-        imageView.kf.setImage(with: URL)
+        imageView.setImage(with: URL)
     }
     
     func displayName(_ name: String) {
