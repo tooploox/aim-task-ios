@@ -10,7 +10,7 @@ import Foundation
 
 typealias OnAirInfoCompletion = (OnAirInfo) -> ()
 
-class XMLOnAirInfoGateway: NSObject, XMLParserDelegate {
+class XMLOnAirInfoGateway: NSObject, XMLParserDelegate, OnAirInfoGateway {
     
     private let onAirInfoFeedURL = URL(string: "http://aim.appdata.abc.net.au.edgesuite.net/data/abc/triplej/onair.xml")!
     private var parser: XMLParser
@@ -39,7 +39,7 @@ class XMLOnAirInfoGateway: NSObject, XMLParserDelegate {
         parser.delegate = self
     }
     
-    func parse(completion: @escaping OnAirInfoCompletion) {
+    func fetchOnAirInfo(completion: @escaping OnAirInfoCompletion) {
         parserCompletion = completion
         parser.parse()
     }

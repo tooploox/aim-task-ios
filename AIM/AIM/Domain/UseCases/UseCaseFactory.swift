@@ -12,9 +12,9 @@ protocol UseCaseProducing: class {
 
 class UseCaseFactory: UseCaseProducing {
     
-    let onAirInfoGateway: XMLOnAirInfoGateway
+    let onAirInfoGateway: OnAirInfoGateway
     
-    init(onAirInfoGateway: XMLOnAirInfoGateway) {
+    init(onAirInfoGateway: OnAirInfoGateway) {
         self.onAirInfoGateway = onAirInfoGateway
     }
     

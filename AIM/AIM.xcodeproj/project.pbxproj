@@ -13,6 +13,7 @@
 		B13313512046B77400D27AAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B133134F2046B77400D27AAE /* LaunchScreen.storyboard */; };
 		B133135C2046B77500D27AAE /* AIMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B133135B2046B77500D27AAE /* AIMTests.swift */; };
 		B13313692046B80500D27AAE /* RootConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13313682046B80500D27AAE /* RootConnector.swift */; };
+		B13815FE204D5F64005C32C4 /* OnAirInfoGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13815FD204D5F64005C32C4 /* OnAirInfoGateway.swift */; };
 		B1386802204710D900483638 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1386801204710D900483638 /* TrackCell.swift */; };
 		B1386805204711F000483638 /* UITableView+Registering.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1386804204711F000483638 /* UITableView+Registering.swift */; };
 		B13868072047122200483638 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13868062047122200483638 /* ReusableView.swift */; };
@@ -52,6 +53,7 @@
 		B133135B2046B77500D27AAE /* AIMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIMTests.swift; sourceTree = "<group>"; };
 		B133135D2046B77500D27AAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B13313682046B80500D27AAE /* RootConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootConnector.swift; sourceTree = "<group>"; };
+		B13815FD204D5F64005C32C4 /* OnAirInfoGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAirInfoGateway.swift; sourceTree = "<group>"; };
 		B1386801204710D900483638 /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 		B1386804204711F000483638 /* UITableView+Registering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Registering.swift"; sourceTree = "<group>"; };
 		B13868062047122200483638 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				B17E91B82046C365005FD3B0 /* Entities */,
+				B13815FC204D5F48005C32C4 /* GatewayProtocol */,
 				B17E91BA2046C37C005FD3B0 /* UseCases */,
 			);
 			path = Domain;
@@ -157,6 +160,14 @@
 				B17E91BB2046C4E6005FD3B0 /* TrackListConnector.swift */,
 			);
 			path = Connectors;
+			sourceTree = "<group>";
+		};
+		B13815FC204D5F48005C32C4 /* GatewayProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				B13815FD204D5F64005C32C4 /* OnAirInfoGateway.swift */,
+			);
+			path = GatewayProtocol;
 			sourceTree = "<group>";
 		};
 		B1386803204711DA00483638 /* Utilities */ = {
@@ -425,6 +436,7 @@
 				B1386802204710D900483638 /* TrackCell.swift in Sources */,
 				B13313472046B77400D27AAE /* AppDelegate.swift in Sources */,
 				B138680B204721EB00483638 /* UIView+AddSubview.swift in Sources */,
+				B13815FE204D5F64005C32C4 /* OnAirInfoGateway.swift in Sources */,
 				B13868072047122200483638 /* ReusableView.swift in Sources */,
 				B1386805204711F000483638 /* UITableView+Registering.swift in Sources */,
 				B189B6402049681F00A6246A /* GetOnAirInfoUseCase.swift in Sources */,
