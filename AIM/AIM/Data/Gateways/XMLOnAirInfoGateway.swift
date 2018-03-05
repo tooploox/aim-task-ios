@@ -55,9 +55,7 @@ class XMLOnAirInfoGateway: NSObject, XMLParserDelegate {
     }
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-        if elementName == "playoutItem" {
-            guard let track = track else { return }
-        
+        if elementName == "playoutItem", let track = track {
             tracks.append(track)
         }
     }
