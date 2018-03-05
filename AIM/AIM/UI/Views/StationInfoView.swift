@@ -12,7 +12,11 @@ class StationInfoView: UIView {
     
     private let nameLabel = UILabel()
     private let descriptionLabel = UILabel()
-    private let imageView = UIImageView()
+    private let imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
     private let separator: UIView = {
         let separator = UIView()
         separator.backgroundColor = UIColor.gray
