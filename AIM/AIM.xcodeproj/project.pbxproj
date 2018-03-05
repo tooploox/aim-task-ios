@@ -10,6 +10,7 @@
 		B104333B204C426300165A68 /* UseCaseFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = B104333A204C426300165A68 /* UseCaseFactory.m */; };
 		B104333E204C452800165A68 /* GetOnAirInfoUseCase.m in Sources */ = {isa = PBXBuildFile; fileRef = B104333D204C452800165A68 /* GetOnAirInfoUseCase.m */; };
 		B10B3E82204834F8007E7F66 /* XMLOnAirInfoGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10B3E81204834F8007E7F66 /* XMLOnAirInfoGateway.swift */; };
+		B1228DD2204D69A3009B6C1A /* TrackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1228DD1204D69A3009B6C1A /* TrackCell.m */; };
 		B13313472046B77400D27AAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13313462046B77400D27AAE /* AppDelegate.swift */; };
 		B133134E2046B77400D27AAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B133134D2046B77400D27AAE /* Assets.xcassets */; };
 		B13313512046B77400D27AAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B133134F2046B77400D27AAE /* LaunchScreen.storyboard */; };
@@ -54,6 +55,8 @@
 		B104333C204C452800165A68 /* GetOnAirInfoUseCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetOnAirInfoUseCase.h; sourceTree = "<group>"; };
 		B104333D204C452800165A68 /* GetOnAirInfoUseCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetOnAirInfoUseCase.m; sourceTree = "<group>"; };
 		B10B3E81204834F8007E7F66 /* XMLOnAirInfoGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLOnAirInfoGateway.swift; sourceTree = "<group>"; };
+		B1228DD0204D69A3009B6C1A /* TrackCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrackCell.h; sourceTree = "<group>"; };
+		B1228DD1204D69A3009B6C1A /* TrackCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackCell.m; sourceTree = "<group>"; };
 		B13313432046B77400D27AAE /* AIM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B13313462046B77400D27AAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B133134D2046B77400D27AAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -256,6 +259,8 @@
 				B17E91C12046C601005FD3B0 /* TrackListViewController.swift */,
 				B1386801204710D900483638 /* TrackCell.swift */,
 				B1386808204720EC00483638 /* StationInfoView.swift */,
+				B1228DD0204D69A3009B6C1A /* TrackCell.h */,
+				B1228DD1204D69A3009B6C1A /* TrackCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -469,6 +474,7 @@
 				B1386802204710D900483638 /* TrackCell.swift in Sources */,
 				B13313472046B77400D27AAE /* AppDelegate.swift in Sources */,
 				B138680B204721EB00483638 /* UIView+AddSubview.swift in Sources */,
+				B1228DD2204D69A3009B6C1A /* TrackCell.m in Sources */,
 				B13815FE204D5F64005C32C4 /* OnAirInfoGateway.swift in Sources */,
 				B1381600204D605D005C32C4 /* UIImageView+Kingfisher.swift in Sources */,
 				B13868072047122200483638 /* ReusableView.swift in Sources */,

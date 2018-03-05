@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Track: NSObject
+@interface Track : NSObject
 
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *artist;

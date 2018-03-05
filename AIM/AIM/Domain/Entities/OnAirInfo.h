@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "StationInfo.h"
 
-@interface OnAirInfo: NSObject
+@interface OnAirInfo : NSObject
 
 @property (nonatomic, strong) StationInfo *stationInfo;
 @property (nonatomic, strong) NSArray *tracks;

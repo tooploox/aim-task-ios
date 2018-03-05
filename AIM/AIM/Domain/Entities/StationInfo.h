@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface StationInfo: NSObject
+@interface StationInfo : NSObject
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *description;
