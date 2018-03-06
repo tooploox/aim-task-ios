@@ -7,10 +7,11 @@
 //
 
 #import "UseCaseFactory.h"
+#import "OnAirInfoGateway.h"
 
 @implementation UseCaseFactory
 
-- (instancetype) initWithOnAirInfoGateway:(NSString *)onAirInfoGateway; { // change type
+- (instancetype) initWithOnAirInfoGateway:(id<UseCaseProducing>)onAirInfoGateway; {
     self = [super init];
     if (self != nil) {
         self.onAirInfoGateway = onAirInfoGateway;

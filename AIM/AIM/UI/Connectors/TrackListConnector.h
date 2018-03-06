@@ -12,7 +12,7 @@
 
 @interface TrackListConnector : NSObject {}
 
-- (instancetype)initWithUseCaseFactory:(id<UseCaseProducing> *)useCaseFactory;
+- (id)initWithUseCaseFactory:(id<UseCaseProducing>)useCaseFactory;
 - (UIViewController *)trackListViewController;
 
 @end

@@ -8,13 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "TrackListPresenter.h"
+#import "TrackListConnector.h"
+#import "UseCaseFactory.h"
 #import "OnAirInfo.h"
 #import "Track.h"
 
 @interface TrackListPresenter () {
     
-//    TrackListConnector *connector;
-//    UseCaseProducing *useCaseFactory;
+    TrackListConnector *connector;
+    id<UseCaseProducing> useCaseFactory;
+    
     OnAirInfo *onAirInfo;
     
 }
@@ -22,6 +25,16 @@
 @end
 
 @implementation TrackListPresenter
+
+- (instancetype)initWithConnector:(TrackListConnector *)connector useCaseFactory:(id<UseCaseProducing>)useCaseFactory {
+    self = [super init];
+    if (self != nil) {
+        self->connector = connector;
+        self->useCaseFactory = useCaseFactory;
+    }
+    
+    return self;
+}
 
 - (int) numberOfTracks {
     if (onAirInfo == nil) {

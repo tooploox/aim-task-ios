@@ -8,6 +8,7 @@
 
 #import "RootConnector.h"
 #import "TrackListConnector.h"
+#import "XMLOnAirInfoGateway.h"
 #import <UIKit/UIKit.h>
 
 @interface RootConnector () {
@@ -22,22 +23,28 @@
 
 @implementation RootConnector
 
-- (instancetype)initIn:(UIWindow *)window; {
+- (instancetype)initInWindow:(UIWindow *)window; {
     self = [super init];
     if (self != nil) {
-        window = window;
+        self->window = window;
     }
+    
+    [self showTrackListView];
+    
     return self;
 }
 
 - (void)showTrackListView {
-//    connector = [TrackListConnector initWithUseCaseFactory: gateway]
+    connector = [[TrackListConnector new] initWithUseCaseFactory: [[UseCaseFactory new] initWithOnAirInfoGateway: [[XMLOnAirInfoGateway new] init]]];
+                                                                   
     viewController = [connector trackListViewController];
+    [self changeWindowRootViewControllerWithAnimation:viewController];
 }
 
-- (void)changeWindowRootViewControllerWithAnimation {
+- (void)changeWindowRootViewControllerWithAnimation: (UIViewController *)viewController {
     [UIView transitionWithView:window duration:0.4 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
-        window.rootViewController = viewController;
+        [self->window addSubview:viewController.view];
+        [self->window setRootViewController:viewController];
     } completion:nil];
 }
 

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "GetOnAirInfoUseCase.h"
+#import "OnAirInfoGateway.h"
 
 @protocol UseCaseProducing
 
@@ -18,8 +19,8 @@
 
 @interface UseCaseFactory: NSObject <UseCaseProducing>
 
-@property (nonatomic, strong) NSString *onAirInfoGateway; // change type
+@property (nonatomic, strong) id<OnAirInfoGateway> onAirInfoGateway;
 
-- (instancetype) initWithOnAirInfoGateway:(NSString *)onAirInfoGateway; // change type
+- (instancetype) initWithOnAirInfoGateway:(id<OnAirInfoGateway>)onAirInfoGateway;
 
 @end

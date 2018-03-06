@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "OnAirInfoGateway.h"
 
 @interface GetOnAirInfoUseCase: NSObject
 
-@property (nonatomic, strong) NSString *gateway; // change to XMLOnAirInfoGateway
+@property (nonatomic, strong) id<OnAirInfoGateway> gateway;
 
-- (instancetype) initWithGateway:(NSString *)gateway; // change to XMLOnAirInfoGateway
+- (instancetype) initWithGateway:(id<OnAirInfoGateway>)gateway;
 
 @end
