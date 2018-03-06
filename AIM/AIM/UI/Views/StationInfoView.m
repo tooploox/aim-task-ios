@@ -29,14 +29,15 @@
 }
 
 -(void)setupView {
-//    backgroundColor = UIColor.white
-    //    [self setupSeparator];
-    //    [self setupImageView];
-    //    [self setupNameLabel];
-    //    [self setupDescriptionlabel];
+    self.backgroundColor = [UIColor whiteColor];
+    [self setupSeparator];
+        [self setupImageView];
+        [self setupNameLabel];
+        [self setupDescriptionLabel];
 }
 
 -(void)setupSeparator {
+    separator = [UIView new];
     separator.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:separator];
     [self addConstraints:@[
@@ -49,6 +50,7 @@
 }
 
 -(void)setupImageView {
+    imageView = [UIImageView new];
     imageView.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:imageView];
     [self addConstraints:@[
@@ -61,6 +63,7 @@
 }
 
 -(void)setupNameLabel {
+    nameLabel = [UILabel new];
     nameLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:nameLabel];
     [self addConstraints:@[
@@ -70,6 +73,7 @@
 }
 
 -(void)setupDescriptionLabel {
+    descriptionLabel = [UILabel new];
     descriptionLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:descriptionLabel];
     [self addConstraints:@[

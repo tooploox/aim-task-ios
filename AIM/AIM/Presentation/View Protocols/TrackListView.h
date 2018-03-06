@@ -8,6 +8,7 @@
 
 @protocol TrackListView
 
+@optional
 - (void)refreshView;
 
 @end

@@ -8,9 +8,9 @@
 
 #import "UseCaseFactory.h"
 
-@implementation UseCaseFactorys
+@implementation UseCaseFactory
 
-- (instancetype) initWithOnAirInfoGateway:(NSString *)onAirInfoGateway; { // change to XMLOnAirInfoGateway
+- (instancetype) initWithOnAirInfoGateway:(NSString *)onAirInfoGateway; { // change type
     self = [super init];
     if (self != nil) {
         self.onAirInfoGateway = onAirInfoGateway;
@@ -18,8 +18,8 @@
     return self;
 }
 
-- (GetOnAirInfoUseCases *)getOnAirInfoUseCase; { // include completion as an argument
-    return [[GetOnAirInfoUseCases init] initWithGateway: self.onAirInfoGateway];
+- (GetOnAirInfoUseCase *)getOnAirInfoUseCase; { // include completion as an argument
+    return [[GetOnAirInfoUseCase init] initWithGateway: self.onAirInfoGateway];
 }
 @end
 

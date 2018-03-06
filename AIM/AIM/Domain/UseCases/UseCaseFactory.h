@@ -11,14 +11,15 @@
 
 @protocol UseCaseProducing
 
-- (GetOnAirInfoUseCases *)getOnAirInfoUseCase; // include completion as an argument
+@required
+- (GetOnAirInfoUseCase *)getOnAirInfoUseCase; // include completion as an argument
 
 @end
 
-@interface UseCaseFactorys: NSObject <UseCaseProducing>
+@interface UseCaseFactory: NSObject <UseCaseProducing>
 
-@property (nonatomic, strong) NSString *onAirInfoGateway; // change to XMLOnAirInfoGateway
+@property (nonatomic, strong) NSString *onAirInfoGateway; // change type
 
-- (instancetype) initWithOnAirInfoGateway:(NSString *)onAirInfoGateway; // change to XMLOnAirInfoGateway
+- (instancetype) initWithOnAirInfoGateway:(NSString *)onAirInfoGateway; // change type
 
 @end

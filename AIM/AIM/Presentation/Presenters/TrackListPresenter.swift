@@ -68,7 +68,7 @@ class TrackListPresenter {
         useCaseFactory.getOnAirInfoUseCase { [weak self] onAirInfo in
             DispatchQueue.main.async {
                 self?.onAirInfo = onAirInfo
-                self?.view?.refreshView()
+//                self?.view?.refreshView()
             }
         }.execute()
     }

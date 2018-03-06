@@ -8,9 +8,9 @@
 
 #import "GetOnAirInfoUseCase.h"
 
-@implementation GetOnAirInfoUseCases
+@implementation GetOnAirInfoUseCase
 
-- (instancetype) initWithGateway:(NSString *)gateway; {// change to XMLOnAirInfoGateway
+- (instancetype) initWithGateway:(NSString *)gateway; {// change type
     self = [super init];
     if (self != nil) {
         self.gateway = gateway;

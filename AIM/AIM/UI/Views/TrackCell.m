@@ -40,13 +40,14 @@
 }
 
 -(void)setupView {
-//    [self setupCoverImageView];
-//    [self setupTitleLabel];
-//    [self setupArtistLabel];
-//    [self setupDurationLabel];
+    [self setupCoverImageView];
+    [self setupTitleLabel];
+    [self setupArtistLabel];
+    [self setupDurationLabel];
 }
 
 -(void)setupCoverImageView {
+    coverImageView = [UIImageView new];
     coverImageView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.contentView addSubview:coverImageView];
     [self addConstraints:@[
@@ -58,6 +59,7 @@
 }
 
 -(void)setupTitleLabel {
+    titleLabel = [UILabel new];
     titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self.contentView addSubview:titleLabel];
     [self addConstraints:@[
@@ -68,6 +70,7 @@
 }
 
 -(void)setupArtistLabel {
+    artistLabel = [UILabel new];
     artistLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self.contentView addSubview:artistLabel];
     [self addConstraints:@[
@@ -78,6 +81,7 @@
 }
 
 -(void)setupDurationLabel {
+    durationLabel = [UILabel new];
     durationLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self.contentView addSubview:durationLabel];
     [self addConstraints:@[
