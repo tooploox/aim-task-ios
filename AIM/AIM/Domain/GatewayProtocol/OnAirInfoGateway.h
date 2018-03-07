@@ -6,9 +6,13 @@
 //  Copyright © 2018 Oskar Szydlowski. All rights reserved.
 //
 
+#import "OnAirInfo.h"
+
 @protocol OnAirInfoGateway
 
+typedef void(^OnAirInfoCompletion)(OnAirInfo *onAirInfo);
+
 @required
-- (void)fetchOnAirInfo; // add completion as parameter
+- (void)fetchOnAirInfo:(OnAirInfoCompletion)completion;
 
 @end

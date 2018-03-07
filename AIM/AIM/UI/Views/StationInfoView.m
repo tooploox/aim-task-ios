@@ -7,7 +7,6 @@
 //
 
 #import "StationInfoView.h"
-#import <UIKit/UIKit.h>
 
 @interface StationInfoView () {
     
@@ -86,7 +85,8 @@
 }
 
 - (void) displayImage: (NSURL *) URL {
-    // set image         coverImageTask = coverImageView.setImage(with: URL)
+    NSData * imageData = [[NSData alloc] initWithContentsOfURL: URL];
+    [imageView setImage: [UIImage imageWithData:imageData]];
 }
 
 - (void) displayName: (NSString *) name {

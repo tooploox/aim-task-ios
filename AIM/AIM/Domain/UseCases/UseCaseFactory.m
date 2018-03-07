@@ -7,11 +7,10 @@
 //
 
 #import "UseCaseFactory.h"
-#import "OnAirInfoGateway.h"
 
 @implementation UseCaseFactory
 
-- (instancetype) initWithOnAirInfoGateway:(id<UseCaseProducing>)onAirInfoGateway; {
+- (instancetype) initWithOnAirInfoGateway:(id<OnAirInfoGateway>)onAirInfoGateway {
     self = [super init];
     if (self != nil) {
         self.onAirInfoGateway = onAirInfoGateway;
@@ -19,8 +18,9 @@
     return self;
 }
 
-- (GetOnAirInfoUseCase *)getOnAirInfoUseCase; { // include completion as an argument
-    return [[GetOnAirInfoUseCase init] initWithGateway: self.onAirInfoGateway];
+- (GetOnAirInfoUseCase *)getOnAirInfoUseCase:(OnAirInfoCompletion)completion {
+    return [[GetOnAirInfoUseCase new] initWithGateway:self.onAirInfoGateway completion:completion];
 }
+
 @end
 

@@ -7,13 +7,12 @@
 //
 
 #import "TrackListConnector.h"
+
 #import "TrackListPresenter.h"
 #import "TrackListViewController.h"
-#import <UIKit/UIKit.h>
 
 @interface TrackListConnector () {
     
-    id<UseCaseProducing> useCaseFactory;
     TrackListPresenter *presenter;
     TrackListViewController *viewController;
     
@@ -26,13 +25,13 @@
 - (id)initWithUseCaseFactory:(id<UseCaseProducing>)useCaseFactory {
     self = [super init];
     if (self != nil) {
-        useCaseFactory = useCaseFactory;
+        self.useCaseFactory = useCaseFactory;
     }
     return self;
 }
 
 - (UIViewController *)trackListViewController {
-    presenter = [[TrackListPresenter new] initWithConnector:self useCaseFactory:useCaseFactory];
+    presenter = [[TrackListPresenter new] initWithConnector:self useCaseFactory:self.useCaseFactory];
     viewController = [[TrackListViewController new] initWithPresenter:presenter];
     presenter.view = viewController;
     

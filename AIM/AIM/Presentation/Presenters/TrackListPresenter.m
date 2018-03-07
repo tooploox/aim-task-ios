@@ -6,50 +6,39 @@
 //  Copyright © 2018 Oskar Szydlowski. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+
 #import "TrackListPresenter.h"
-#import "TrackListConnector.h"
-#import "UseCaseFactory.h"
-#import "OnAirInfo.h"
+#import "StationInfo.h"
 #import "Track.h"
-
-@interface TrackListPresenter () {
-    
-    TrackListConnector *connector;
-    id<UseCaseProducing> useCaseFactory;
-    
-    OnAirInfo *onAirInfo;
-    
-}
-
-@end
 
 @implementation TrackListPresenter
 
 - (instancetype)initWithConnector:(TrackListConnector *)connector useCaseFactory:(id<UseCaseProducing>)useCaseFactory {
     self = [super init];
     if (self != nil) {
-        self->connector = connector;
-        self->useCaseFactory = useCaseFactory;
+        self.connector = connector;
+        self.useCaseFactory = useCaseFactory;
     }
     
     return self;
 }
 
 - (int) numberOfTracks {
-    if (onAirInfo == nil) {
+    if (self.onAirInfo == nil) {
         return 0;
     }
     
-    return onAirInfo.tracks.count;
+    return (int)self.onAirInfo.tracks.count;
 }
 
 - (void) configureCell: (TrackCell *) cell atIndex: (int) index; {
-    if (onAirInfo == nil) {
+    if (self.onAirInfo == nil) {
         return;
     }
     
-    Track *track = [onAirInfo.tracks objectAtIndex:index];
+    Track *track = [self.onAirInfo.tracks objectAtIndex:index];
     
     if (track.imageURL != nil) {
         [cell displayImage: track.imageURL];
@@ -61,30 +50,30 @@
 }
 
 - (void) configureHeaderView: (StationInfoView *) headerView {
-    if (onAirInfo == nil ||onAirInfo.stationInfo == nil) {
+    if (self.onAirInfo == nil ||self.onAirInfo.stationInfo == nil) {
         return;
     }
-
-    if (onAirInfo.stationInfo.imageURL != nil) {
-        [headerView displayImage:onAirInfo.stationInfo.imageURL];
+    if (self.onAirInfo.stationInfo.imageURL != nil) {
+        [headerView displayImage:self.onAirInfo.stationInfo.imageURL];
+    } else {
     }
 
-    [headerView displayName:onAirInfo.stationInfo.name];
-    [headerView displayDescription:onAirInfo.stationInfo.description];
+    [headerView displayName:self.onAirInfo.stationInfo.name];
+    [headerView displayDescription:self.onAirInfo.stationInfo.description];
 }
 
 - (Boolean) shouldDisplayHeader {
-    return onAirInfo.stationInfo != nil;
+    return self.onAirInfo.stationInfo != nil;
 
 }
 
 - (void) fetchOnAirInfo {
-//    useCaseFactory.getOnAirInfoUseCase { [weak self] onAirInfo in
-//        DispatchQueue.main.async {
-//            self?.onAirInfo = onAirInfo
-//            self?.view?.refreshView()
-//        }
-//    }.execute()
+    [[self.useCaseFactory getOnAirInfoUseCase:^(OnAirInfo *onAirInfo) {
+        dispatch_async(dispatch_get_main_queue(), ^(void){
+            self.onAirInfo = onAirInfo;
+            [self.view refreshView];
+        });
+    }] execute];
 }
 
 @end

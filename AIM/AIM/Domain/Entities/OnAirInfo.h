@@ -7,9 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+
 #import "StationInfo.h"
 
 @interface OnAirInfo : NSObject
+
+-(id)initWithStationInfo:(StationInfo *)stationInfo tracks:(NSMutableArray *)tracks;
 
 @property (nonatomic, strong) StationInfo *stationInfo;
 @property (nonatomic, strong) NSArray *tracks;

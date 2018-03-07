@@ -10,13 +10,15 @@
 
 @interface Track : NSObject
 
+-(id)initWithAttributesDictionary:(NSDictionary<NSString *,NSString *> *)attributes;
+
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *artist;
 @property (nonatomic, strong) NSString *album;
 @property (nonatomic, strong) NSString *playTime;
 @property (nonatomic, strong) NSString *duration;
 @property (nonatomic, strong) NSURL *imageURL;
-@property (nonatomic, strong) NSString *status; // possibly change to enum, "history", "playing"
-@property (nonatomic, strong) NSString *type; // possibly change to enum, "song"
+@property (nonatomic, strong) NSString *status;
+@property (nonatomic, strong) NSString *type;
 
 @end

@@ -6,9 +6,24 @@
 //  Copyright © 2018 Oskar Szydlowski. All rights reserved.
 //
 
-#import "OnAirInfoGateway.h"
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#import "OnAirInfoGateway.h"
+#import "OnAirInfo.h"
+#import "StationInfo.h"
+#import "Track.h"
+
 @interface XMLOnAirInfoGateway : NSObject <NSXMLParserDelegate, OnAirInfoGateway> {}
+
+@property (nonatomic, strong) NSString *stationDisplayTime;
+@property (nonatomic, strong) NSURL *stationImageURL;
+@property (nonatomic, strong) StationInfo *stationInfo;
+@property (nonatomic, strong) NSMutableArray *tracks;
+@property (nonatomic, strong) Track *track;
+@property (nonatomic, strong) OnAirInfo *onAirInfo;
+
+@property (nonatomic, strong) NSXMLParser *parser;
+@property (nonatomic, weak) OnAirInfoCompletion onAirInfoCompletion;
+
 @end

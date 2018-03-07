@@ -8,12 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+
 #import "UseCaseFactory.h"
 
 @interface TrackListConnector : NSObject {}
 
 - (id)initWithUseCaseFactory:(id<UseCaseProducing>)useCaseFactory;
 - (UIViewController *)trackListViewController;
+
+@property (nonatomic, strong) id<UseCaseProducing> useCaseFactory;
 
 @end
 

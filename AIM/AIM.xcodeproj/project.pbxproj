@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B104333B204C426300165A68 /* UseCaseFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = B104333A204C426300165A68 /* UseCaseFactory.m */; };
 		B104333E204C452800165A68 /* GetOnAirInfoUseCase.m in Sources */ = {isa = PBXBuildFile; fileRef = B104333D204C452800165A68 /* GetOnAirInfoUseCase.m */; };
-		B10B3E82204834F8007E7F66 /* XMLOnAirInfoGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10B3E81204834F8007E7F66 /* XMLOnAirInfoGateway.swift */; };
 		B110F7C4204E9DEF005C0CDF /* RootConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = B110F7C3204E9DEF005C0CDF /* RootConnector.m */; };
 		B110F7C8204EA048005C0CDF /* XMLOnAirInfoGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = B110F7C7204EA048005C0CDF /* XMLOnAirInfoGateway.m */; };
 		B110F7CB204EC4FA005C0CDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B110F7CA204EC4FA005C0CDF /* AppDelegate.m */; };
@@ -22,19 +21,6 @@
 		B133134E2046B77400D27AAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B133134D2046B77400D27AAE /* Assets.xcassets */; };
 		B13313512046B77400D27AAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B133134F2046B77400D27AAE /* LaunchScreen.storyboard */; };
 		B133135C2046B77500D27AAE /* AIMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B133135B2046B77500D27AAE /* AIMTests.swift */; };
-		B13815FE204D5F64005C32C4 /* OnAirInfoGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13815FD204D5F64005C32C4 /* OnAirInfoGateway.swift */; };
-		B1381600204D605D005C32C4 /* UIImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13815FF204D605D005C32C4 /* UIImageView+Kingfisher.swift */; };
-		B1386805204711F000483638 /* UITableView+Registering.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1386804204711F000483638 /* UITableView+Registering.swift */; };
-		B13868072047122200483638 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13868062047122200483638 /* ReusableView.swift */; };
-		B138680B204721EB00483638 /* UIView+AddSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B138680A204721EB00483638 /* UIView+AddSubview.swift */; };
-		B17E91BC2046C4E6005FD3B0 /* TrackListConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E91BB2046C4E6005FD3B0 /* TrackListConnector.swift */; };
-		B17E91BE2046C577005FD3B0 /* TrackListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E91BD2046C577005FD3B0 /* TrackListPresenter.swift */; };
-		B17E91C22046C601005FD3B0 /* TrackListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E91C12046C601005FD3B0 /* TrackListViewController.swift */; };
-		B17E91C42046C65E005FD3B0 /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E91C32046C65E005FD3B0 /* UseCaseFactory.swift */; };
-		B17E91C62046C9BA005FD3B0 /* StationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E91C52046C9BA005FD3B0 /* StationInfo.swift */; };
-		B17E91C82046CA46005FD3B0 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E91C72046CA46005FD3B0 /* Track.swift */; };
-		B17E91CA2046CAE1005FD3B0 /* OnAirInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E91C92046CAE1005FD3B0 /* OnAirInfo.swift */; };
-		B189B6402049681F00A6246A /* GetOnAirInfoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B189B63F2049681F00A6246A /* GetOnAirInfoUseCase.swift */; };
 		B1FAA606204C20C600FACBA5 /* OnAirInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FAA605204C20C600FACBA5 /* OnAirInfo.m */; };
 		B1FAA609204C217300FACBA5 /* StationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FAA608204C217300FACBA5 /* StationInfo.m */; };
 		B1FAA60C204C225300FACBA5 /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FAA60B204C225300FACBA5 /* Track.m */; };
@@ -58,7 +44,6 @@
 		B104333A204C426300165A68 /* UseCaseFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UseCaseFactory.m; sourceTree = "<group>"; };
 		B104333C204C452800165A68 /* GetOnAirInfoUseCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetOnAirInfoUseCase.h; sourceTree = "<group>"; };
 		B104333D204C452800165A68 /* GetOnAirInfoUseCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetOnAirInfoUseCase.m; sourceTree = "<group>"; };
-		B10B3E81204834F8007E7F66 /* XMLOnAirInfoGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLOnAirInfoGateway.swift; sourceTree = "<group>"; };
 		B110F7C2204E9DEF005C0CDF /* RootConnector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootConnector.h; sourceTree = "<group>"; };
 		B110F7C3204E9DEF005C0CDF /* RootConnector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootConnector.m; sourceTree = "<group>"; };
 		B110F7C5204E9FFB005C0CDF /* OnAirInfoGateway.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnAirInfoGateway.h; sourceTree = "<group>"; };
@@ -84,19 +69,6 @@
 		B13313572046B77500D27AAE /* AIMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AIMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B133135B2046B77500D27AAE /* AIMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIMTests.swift; sourceTree = "<group>"; };
 		B133135D2046B77500D27AAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B13815FD204D5F64005C32C4 /* OnAirInfoGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAirInfoGateway.swift; sourceTree = "<group>"; };
-		B13815FF204D605D005C32C4 /* UIImageView+Kingfisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Kingfisher.swift"; sourceTree = "<group>"; };
-		B1386804204711F000483638 /* UITableView+Registering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Registering.swift"; sourceTree = "<group>"; };
-		B13868062047122200483638 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
-		B138680A204721EB00483638 /* UIView+AddSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddSubview.swift"; sourceTree = "<group>"; };
-		B17E91BB2046C4E6005FD3B0 /* TrackListConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListConnector.swift; sourceTree = "<group>"; };
-		B17E91BD2046C577005FD3B0 /* TrackListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListPresenter.swift; sourceTree = "<group>"; };
-		B17E91C12046C601005FD3B0 /* TrackListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListViewController.swift; sourceTree = "<group>"; };
-		B17E91C32046C65E005FD3B0 /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
-		B17E91C52046C9BA005FD3B0 /* StationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationInfo.swift; sourceTree = "<group>"; };
-		B17E91C72046CA46005FD3B0 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
-		B17E91C92046CAE1005FD3B0 /* OnAirInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAirInfo.swift; sourceTree = "<group>"; };
-		B189B63F2049681F00A6246A /* GetOnAirInfoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOnAirInfoUseCase.swift; sourceTree = "<group>"; };
 		B1A70EB3204AA14500A759A6 /* OnAirInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnAirInfo.h; sourceTree = "<group>"; };
 		B1FAA604204C20C600FACBA5 /* AIM-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AIM-Bridging-Header.h"; sourceTree = "<group>"; };
 		B1FAA605204C20C600FACBA5 /* OnAirInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OnAirInfo.m; sourceTree = "<group>"; };
@@ -195,7 +167,6 @@
 		B13313672046B7F200D27AAE /* Connectors */ = {
 			isa = PBXGroup;
 			children = (
-				B17E91BB2046C4E6005FD3B0 /* TrackListConnector.swift */,
 				B1228DDC204D9474009B6C1A /* TrackListConnector.h */,
 				B1228DDD204D9474009B6C1A /* TrackListConnector.m */,
 				B110F7C2204E9DEF005C0CDF /* RootConnector.h */,
@@ -207,21 +178,9 @@
 		B13815FC204D5F48005C32C4 /* GatewayProtocol */ = {
 			isa = PBXGroup;
 			children = (
-				B13815FD204D5F64005C32C4 /* OnAirInfoGateway.swift */,
 				B110F7C5204E9FFB005C0CDF /* OnAirInfoGateway.h */,
 			);
 			path = GatewayProtocol;
-			sourceTree = "<group>";
-		};
-		B1386803204711DA00483638 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				B13868062047122200483638 /* ReusableView.swift */,
-				B1386804204711F000483638 /* UITableView+Registering.swift */,
-				B138680A204721EB00483638 /* UIView+AddSubview.swift */,
-				B13815FF204D605D005C32C4 /* UIImageView+Kingfisher.swift */,
-			);
-			path = Utilities;
 			sourceTree = "<group>";
 		};
 		B17E91B12046C2F2005FD3B0 /* Data */ = {
@@ -235,7 +194,6 @@
 		B17E91B22046C2F9005FD3B0 /* Gateways */ = {
 			isa = PBXGroup;
 			children = (
-				B10B3E81204834F8007E7F66 /* XMLOnAirInfoGateway.swift */,
 				B110F7C6204EA047005C0CDF /* XMLOnAirInfoGateway.h */,
 				B110F7C7204EA048005C0CDF /* XMLOnAirInfoGateway.m */,
 			);
@@ -254,7 +212,6 @@
 		B17E91B42046C319005FD3B0 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
-				B17E91BD2046C577005FD3B0 /* TrackListPresenter.swift */,
 				B1228DD9204D8F77009B6C1A /* TrackListPresenter.h */,
 				B1228DDA204D8F77009B6C1A /* TrackListPresenter.m */,
 			);
@@ -273,7 +230,6 @@
 			isa = PBXGroup;
 			children = (
 				B13313672046B7F200D27AAE /* Connectors */,
-				B1386803204711DA00483638 /* Utilities */,
 				B17E91B72046C344005FD3B0 /* Views */,
 			);
 			path = UI;
@@ -282,7 +238,6 @@
 		B17E91B72046C344005FD3B0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B17E91C12046C601005FD3B0 /* TrackListViewController.swift */,
 				B1228DD3204D85D3009B6C1A /* StationInfoView.h */,
 				B1228DD4204D85D3009B6C1A /* StationInfoView.m */,
 				B1228DD0204D69A3009B6C1A /* TrackCell.h */,
@@ -296,9 +251,6 @@
 		B17E91B82046C365005FD3B0 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				B17E91C92046CAE1005FD3B0 /* OnAirInfo.swift */,
-				B17E91C52046C9BA005FD3B0 /* StationInfo.swift */,
-				B17E91C72046CA46005FD3B0 /* Track.swift */,
 				B1A70EB3204AA14500A759A6 /* OnAirInfo.h */,
 				B1FAA605204C20C600FACBA5 /* OnAirInfo.m */,
 				B1FAA607204C217300FACBA5 /* StationInfo.h */,
@@ -312,8 +264,6 @@
 		B17E91BA2046C37C005FD3B0 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				B17E91C32046C65E005FD3B0 /* UseCaseFactory.swift */,
-				B189B63F2049681F00A6246A /* GetOnAirInfoUseCase.swift */,
 				B1043339204C426300165A68 /* UseCaseFactory.h */,
 				B104333A204C426300165A68 /* UseCaseFactory.m */,
 				B104333C204C452800165A68 /* GetOnAirInfoUseCase.h */,
@@ -474,10 +424,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-AIM/Pods-AIM-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -493,31 +445,17 @@
 			files = (
 				B1FAA60C204C225300FACBA5 /* Track.m in Sources */,
 				B104333E204C452800165A68 /* GetOnAirInfoUseCase.m in Sources */,
-				B17E91BE2046C577005FD3B0 /* TrackListPresenter.swift in Sources */,
 				B1FAA606204C20C600FACBA5 /* OnAirInfo.m in Sources */,
 				B1228DD5204D85D3009B6C1A /* StationInfoView.m in Sources */,
-				B17E91C62046C9BA005FD3B0 /* StationInfo.swift in Sources */,
-				B17E91CA2046CAE1005FD3B0 /* OnAirInfo.swift in Sources */,
 				B1228DDB204D8F77009B6C1A /* TrackListPresenter.m in Sources */,
-				B17E91C22046C601005FD3B0 /* TrackListViewController.swift in Sources */,
-				B138680B204721EB00483638 /* UIView+AddSubview.swift in Sources */,
 				B110F7C8204EA048005C0CDF /* XMLOnAirInfoGateway.m in Sources */,
 				B1228DD2204D69A3009B6C1A /* TrackCell.m in Sources */,
-				B13815FE204D5F64005C32C4 /* OnAirInfoGateway.swift in Sources */,
-				B1381600204D605D005C32C4 /* UIImageView+Kingfisher.swift in Sources */,
-				B13868072047122200483638 /* ReusableView.swift in Sources */,
 				B110F7CB204EC4FA005C0CDF /* AppDelegate.m in Sources */,
-				B1386805204711F000483638 /* UITableView+Registering.swift in Sources */,
-				B189B6402049681F00A6246A /* GetOnAirInfoUseCase.swift in Sources */,
 				B110F7CD204EC540005C0CDF /* Main.m in Sources */,
-				B17E91C82046CA46005FD3B0 /* Track.swift in Sources */,
 				B1228DDE204D9474009B6C1A /* TrackListConnector.m in Sources */,
-				B10B3E82204834F8007E7F66 /* XMLOnAirInfoGateway.swift in Sources */,
 				B104333B204C426300165A68 /* UseCaseFactory.m in Sources */,
 				B1228DD8204D8DEA009B6C1A /* TrackListViewController.m in Sources */,
 				B110F7C4204E9DEF005C0CDF /* RootConnector.m in Sources */,
-				B17E91BC2046C4E6005FD3B0 /* TrackListConnector.swift in Sources */,
-				B17E91C42046C65E005FD3B0 /* UseCaseFactory.swift in Sources */,
 				B1FAA609204C217300FACBA5 /* StationInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -699,7 +637,6 @@
 		B13313642046B77500D27AAE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 89T2GE89HD;
@@ -716,7 +653,6 @@
 		B13313652046B77500D27AAE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 89T2GE89HD;

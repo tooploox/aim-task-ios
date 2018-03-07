@@ -10,11 +10,17 @@
 
 @implementation GetOnAirInfoUseCase
 
-- (instancetype) initWithGateway:(NSString *)gateway; {// change type
+- (instancetype) initWithGateway:(id<OnAirInfoGateway>)gateway completion:(OnAirInfoCompletion)completion {
     self = [super init];
     if (self != nil) {
         self.gateway = gateway;
+        self.completion = completion;
     }
     return self;
 }
+
+- (void) execute {
+    [self.gateway fetchOnAirInfo:self.completion];
+}
+
 @end

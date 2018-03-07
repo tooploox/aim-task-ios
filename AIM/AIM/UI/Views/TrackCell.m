@@ -7,7 +7,6 @@
 //
 
 #import "TrackCell.h"
-#import <UIKit/UIKit.h>
 
 @interface TrackCell () {
     
@@ -15,7 +14,6 @@
     UILabel *artistLabel;
     UIImageView *coverImageView;
     UILabel *durationLabel;
-//    ImageTask *coverImageTask; 
     
 }
 
@@ -32,7 +30,6 @@
 
 -(void)prepareForReuse {
     [super prepareForReuse];
-    //cancel cover image task         coverImageTask?.cancel()
     coverImageView = nil;
     titleLabel.text = nil;
     artistLabel.text = nil;
@@ -91,7 +88,7 @@
 }
 
 - (void) displayImage: (NSURL *) URL {
-    // set image         coverImageTask = coverImageView.setImage(with: URL)
+    [coverImageView sd_setImageWithURL:URL];
 }
 
 - (void) displayTitle: (NSString *) title {

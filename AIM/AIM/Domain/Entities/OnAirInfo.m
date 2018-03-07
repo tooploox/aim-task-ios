@@ -9,4 +9,14 @@
 #import "OnAirInfo.h"
 
 @implementation OnAirInfo
+
+-(id)initWithStationInfo:(StationInfo *)stationInfo tracks:(NSMutableArray *)tracks {
+    self = [super init];
+    if (self != nil) {
+        self.stationInfo = stationInfo;
+        self.tracks = tracks;
+    }
+    return self;
+}
+
 @end

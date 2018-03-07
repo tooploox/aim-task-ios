@@ -7,13 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GetOnAirInfoUseCase.h"
+
 #import "OnAirInfoGateway.h"
+#import "GetOnAirInfoUseCase.h"
 
 @protocol UseCaseProducing
 
 @required
-- (GetOnAirInfoUseCase *)getOnAirInfoUseCase; // include completion as an argument
+- (GetOnAirInfoUseCase *)getOnAirInfoUseCase:(OnAirInfoCompletion)completion;
 
 @end
 
@@ -22,5 +23,6 @@
 @property (nonatomic, strong) id<OnAirInfoGateway> onAirInfoGateway;
 
 - (instancetype) initWithOnAirInfoGateway:(id<OnAirInfoGateway>)onAirInfoGateway;
+- (GetOnAirInfoUseCase *)getOnAirInfoUseCase:(OnAirInfoCompletion)completion;
 
 @end

@@ -8,11 +8,11 @@
 
 #import "TrackListViewController.h"
 
+#import "TrackCell.h"
+
 @interface TrackListViewController () {
     
-    TrackListPresenter *presenter;
     UITableView *tableView;
-//    CGFloat rowHeight = 90.0;
     
 }
 
@@ -20,11 +20,15 @@
 
 @implementation TrackListViewController
 
+static NSString *cellIdentifier = @"TrackCell";
+static CGFloat rowHeight = 90.0;
+
+
 - (id)initWithPresenter:(TrackListPresenter *)presenter {
     self = [super init];
 
     if (self != nil) {
-        presenter = presenter;
+        self.presenter = presenter;
         return self;
     }
     return nil;
@@ -38,44 +42,44 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    setupTableView;
-//    fetchOnAirInfo;
+    [self setupTableView];
+    [self fetchOnAirInfo];
 }
 
 - (void)setupTableView {
-    //private func setupTableView() {
-    //    view.addSubview(tableView, with: [
-    //                                      tableView.topAnchor.constraint(equalTo: view.topAnchor),
-    //                                      tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-    //                                      tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-    //                                      tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-    //                                      ])
-    //
-    //    tableView.dataSource = self
-    //    tableView.delegate = self
-    //    tableView.register(TrackCell.self)
-    //}
+    tableView = [UITableView new];
+    tableView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:tableView];
+    [self.view addConstraints:@[
+                           [tableView.topAnchor constraintEqualToAnchor:self.view.topAnchor],
+                           [tableView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor],
+                           [tableView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor],
+                           [tableView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor]
+    ]];
+    tableView.dataSource = self;
+    tableView.delegate = self;
+    [tableView registerClass:[TrackCell self] forCellReuseIdentifier:cellIdentifier];
 }
 
 // MARK: - UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 90.0;//rowHeight;
+    return rowHeight;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    if ([presenter shouldDisplayHeader]) {
-        return 90.0;//rowHeight;
+    if ([self.presenter shouldDisplayHeader]) {
+        return rowHeight;
     } else {
         return 0.0;
     }
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    if ([presenter shouldDisplayHeader]) {
-        //        let headerView = StationInfoView()
-        //        presenter.configureHeaderView(headerView)
-        //        return headerView
+    if ([self.presenter shouldDisplayHeader]) {
+        StationInfoView *headerView = [StationInfoView new];
+        [self.presenter configureHeaderView:headerView];
+        return headerView;
     }
     return nil;
 }
@@ -83,14 +87,13 @@
 //MARK: - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [presenter numberOfTracks];
+    return [self.presenter numberOfTracks];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    //    let cell: TrackCell = tableView.dequeueReusableCell(for: indexPath)
-    //    presenter.configureCell(cell, at: indexPath.row)
-    //    return cell
-    return [UITableViewCell init];
+    TrackCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    [self.presenter configureCell:cell atIndex:indexPath.row];
+    return cell;
 }
 
 // MARK: - TrackListView
@@ -100,7 +103,7 @@
 }
 
 - (void) fetchOnAirInfo {
-    [presenter fetchOnAirInfo];
+    [self.presenter fetchOnAirInfo];
 }
 
 @end

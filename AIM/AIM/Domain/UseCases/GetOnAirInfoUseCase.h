@@ -7,12 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+
 #import "OnAirInfoGateway.h"
 
 @interface GetOnAirInfoUseCase: NSObject
 
 @property (nonatomic, strong) id<OnAirInfoGateway> gateway;
+@property (nonatomic, weak) OnAirInfoCompletion completion;
 
-- (instancetype) initWithGateway:(id<OnAirInfoGateway>)gateway;
+- (instancetype) initWithGateway:(id<OnAirInfoGateway>)gateway completion:(OnAirInfoCompletion)completion;
+- (void) execute;
 
 @end

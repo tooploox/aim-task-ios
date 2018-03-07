@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+
 #import "TrackListView.h"
 #import "TrackListPresenter.h"
 
 @interface TrackListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, TrackListView> {}
+
+@property TrackListPresenter *presenter;
 
 - (id)initWithPresenter:(TrackListPresenter *)presenter;
 - (void) refreshView;
