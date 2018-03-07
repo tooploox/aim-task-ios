@@ -16,6 +16,8 @@
 
 @interface XMLOnAirInfoGateway : NSObject <NSXMLParserDelegate, OnAirInfoGateway> {}
 
+@property (nonatomic, weak) OnAirInfoCompletion onAirInfoCompletion;
+
 @property (nonatomic, strong) NSString *stationDisplayTime;
 @property (nonatomic, strong) NSURL *stationImageURL;
 @property (nonatomic, strong) StationInfo *stationInfo;
@@ -24,6 +26,5 @@
 @property (nonatomic, strong) OnAirInfo *onAirInfo;
 
 @property (nonatomic, strong) NSXMLParser *parser;
-@property (nonatomic, weak) OnAirInfoCompletion onAirInfoCompletion;
 
 @end

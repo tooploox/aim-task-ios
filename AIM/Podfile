@@ -1,5 +1,4 @@
 target 'AIM' do
-  pod 'Kingfisher'
   pod 'SDWebImage', '~> 4.0'
 end
 

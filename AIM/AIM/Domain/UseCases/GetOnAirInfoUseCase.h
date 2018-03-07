@@ -12,8 +12,9 @@
 
 @interface GetOnAirInfoUseCase: NSObject
 
-@property (nonatomic, strong) id<OnAirInfoGateway> gateway;
 @property (nonatomic, weak) OnAirInfoCompletion completion;
+
+@property (nonatomic, strong) id<OnAirInfoGateway> gateway;
 
 - (id) initWithGateway:(id<OnAirInfoGateway>)gateway completion:(OnAirInfoCompletion)completion;
 - (void) execute;
