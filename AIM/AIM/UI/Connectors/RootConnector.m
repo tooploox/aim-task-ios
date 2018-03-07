@@ -22,7 +22,7 @@
 
 @implementation RootConnector
 
-- (instancetype)initInWindow:(UIWindow *)window; {
+- (id)initInWindow:(UIWindow *)window; {
     self = [super init];
     if (self != nil) {
         self->window = window;

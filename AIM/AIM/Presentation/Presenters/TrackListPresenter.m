@@ -15,7 +15,7 @@
 
 @implementation TrackListPresenter
 
-- (instancetype)initWithConnector:(TrackListConnector *)connector useCaseFactory:(id<UseCaseProducing>)useCaseFactory {
+- (id)initWithConnector:(TrackListConnector *)connector useCaseFactory:(id<UseCaseProducing>)useCaseFactory {
     self = [super init];
     if (self != nil) {
         self.connector = connector;

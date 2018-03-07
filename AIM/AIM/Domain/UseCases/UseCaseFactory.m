@@ -10,7 +10,7 @@
 
 @implementation UseCaseFactory
 
-- (instancetype) initWithOnAirInfoGateway:(id<OnAirInfoGateway>)onAirInfoGateway {
+- (id) initWithOnAirInfoGateway:(id<OnAirInfoGateway>)onAirInfoGateway {
     self = [super init];
     if (self != nil) {
         self.onAirInfoGateway = onAirInfoGateway;

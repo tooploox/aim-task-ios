@@ -11,6 +11,6 @@
 
 @interface RootConnector : NSObject {}
 
-- (instancetype)initInWindow:(UIWindow *)window;
+- (id)initInWindow:(UIWindow *)window;
 
 @end
