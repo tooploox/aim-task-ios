@@ -7,11 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B13313472046B77400D27AAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13313462046B77400D27AAE /* AppDelegate.swift */; };
+		B104333B204C426300165A68 /* UseCaseFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = B104333A204C426300165A68 /* UseCaseFactory.m */; };
+		B104333E204C452800165A68 /* GetOnAirInfoUseCase.m in Sources */ = {isa = PBXBuildFile; fileRef = B104333D204C452800165A68 /* GetOnAirInfoUseCase.m */; };
+		B110F7C4204E9DEF005C0CDF /* RootConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = B110F7C3204E9DEF005C0CDF /* RootConnector.m */; };
+		B110F7C8204EA048005C0CDF /* XMLOnAirInfoGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = B110F7C7204EA048005C0CDF /* XMLOnAirInfoGateway.m */; };
+		B110F7CB204EC4FA005C0CDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B110F7CA204EC4FA005C0CDF /* AppDelegate.m */; };
+		B110F7CD204EC540005C0CDF /* Main.m in Sources */ = {isa = PBXBuildFile; fileRef = B110F7CC204EC540005C0CDF /* Main.m */; };
+		B1228DD2204D69A3009B6C1A /* TrackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1228DD1204D69A3009B6C1A /* TrackCell.m */; };
+		B1228DD5204D85D3009B6C1A /* StationInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1228DD4204D85D3009B6C1A /* StationInfoView.m */; };
+		B1228DD8204D8DEA009B6C1A /* TrackListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1228DD7204D8DEA009B6C1A /* TrackListViewController.m */; };
+		B1228DDB204D8F77009B6C1A /* TrackListPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B1228DDA204D8F77009B6C1A /* TrackListPresenter.m */; };
+		B1228DDE204D9474009B6C1A /* TrackListConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = B1228DDD204D9474009B6C1A /* TrackListConnector.m */; };
 		B133134E2046B77400D27AAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B133134D2046B77400D27AAE /* Assets.xcassets */; };
 		B13313512046B77400D27AAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B133134F2046B77400D27AAE /* LaunchScreen.storyboard */; };
 		B133135C2046B77500D27AAE /* AIMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B133135B2046B77500D27AAE /* AIMTests.swift */; };
-		B13313692046B80500D27AAE /* RootConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13313682046B80500D27AAE /* RootConnector.swift */; };
+		B1FAA606204C20C600FACBA5 /* OnAirInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FAA605204C20C600FACBA5 /* OnAirInfo.m */; };
+		B1FAA609204C217300FACBA5 /* StationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FAA608204C217300FACBA5 /* StationInfo.m */; };
+		B1FAA60C204C225300FACBA5 /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FAA60B204C225300FACBA5 /* Track.m */; };
+		D4092818840E7DF0515F23F6 /* Pods_AIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808112B8C3D0BA1224308929 /* Pods_AIM.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,15 +38,45 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		808112B8C3D0BA1224308929 /* Pods_AIM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AIM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1043338204C407800165A68 /* TrackListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrackListView.h; sourceTree = "<group>"; };
+		B1043339204C426300165A68 /* UseCaseFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UseCaseFactory.h; sourceTree = "<group>"; };
+		B104333A204C426300165A68 /* UseCaseFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UseCaseFactory.m; sourceTree = "<group>"; };
+		B104333C204C452800165A68 /* GetOnAirInfoUseCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetOnAirInfoUseCase.h; sourceTree = "<group>"; };
+		B104333D204C452800165A68 /* GetOnAirInfoUseCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetOnAirInfoUseCase.m; sourceTree = "<group>"; };
+		B110F7C2204E9DEF005C0CDF /* RootConnector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootConnector.h; sourceTree = "<group>"; };
+		B110F7C3204E9DEF005C0CDF /* RootConnector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootConnector.m; sourceTree = "<group>"; };
+		B110F7C5204E9FFB005C0CDF /* OnAirInfoGateway.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnAirInfoGateway.h; sourceTree = "<group>"; };
+		B110F7C6204EA047005C0CDF /* XMLOnAirInfoGateway.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMLOnAirInfoGateway.h; sourceTree = "<group>"; };
+		B110F7C7204EA048005C0CDF /* XMLOnAirInfoGateway.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMLOnAirInfoGateway.m; sourceTree = "<group>"; };
+		B110F7C9204EC4FA005C0CDF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B110F7CA204EC4FA005C0CDF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B110F7CC204EC540005C0CDF /* Main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Main.m; sourceTree = "<group>"; };
+		B1228DD0204D69A3009B6C1A /* TrackCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrackCell.h; sourceTree = "<group>"; };
+		B1228DD1204D69A3009B6C1A /* TrackCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackCell.m; sourceTree = "<group>"; };
+		B1228DD3204D85D3009B6C1A /* StationInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StationInfoView.h; sourceTree = "<group>"; };
+		B1228DD4204D85D3009B6C1A /* StationInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StationInfoView.m; sourceTree = "<group>"; };
+		B1228DD6204D8DEA009B6C1A /* TrackListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrackListViewController.h; sourceTree = "<group>"; };
+		B1228DD7204D8DEA009B6C1A /* TrackListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackListViewController.m; sourceTree = "<group>"; };
+		B1228DD9204D8F77009B6C1A /* TrackListPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrackListPresenter.h; sourceTree = "<group>"; };
+		B1228DDA204D8F77009B6C1A /* TrackListPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackListPresenter.m; sourceTree = "<group>"; };
+		B1228DDC204D9474009B6C1A /* TrackListConnector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrackListConnector.h; sourceTree = "<group>"; };
+		B1228DDD204D9474009B6C1A /* TrackListConnector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackListConnector.m; sourceTree = "<group>"; };
 		B13313432046B77400D27AAE /* AIM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIM.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B13313462046B77400D27AAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B133134D2046B77400D27AAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B13313502046B77400D27AAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B13313522046B77400D27AAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B13313572046B77500D27AAE /* AIMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AIMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B133135B2046B77500D27AAE /* AIMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIMTests.swift; sourceTree = "<group>"; };
 		B133135D2046B77500D27AAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B13313682046B80500D27AAE /* RootConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootConnector.swift; sourceTree = "<group>"; };
+		B1A70EB3204AA14500A759A6 /* OnAirInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnAirInfo.h; sourceTree = "<group>"; };
+		B1FAA605204C20C600FACBA5 /* OnAirInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OnAirInfo.m; sourceTree = "<group>"; };
+		B1FAA607204C217300FACBA5 /* StationInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StationInfo.h; sourceTree = "<group>"; };
+		B1FAA608204C217300FACBA5 /* StationInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StationInfo.m; sourceTree = "<group>"; };
+		B1FAA60A204C225300FACBA5 /* Track.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Track.h; sourceTree = "<group>"; };
+		B1FAA60B204C225300FACBA5 /* Track.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Track.m; sourceTree = "<group>"; };
+		B720BCC55E1D9D3C04D7CC63 /* Pods-AIM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AIM/Pods-AIM.debug.xcconfig"; sourceTree = "<group>"; };
+		F11410BEFA37E9267C26B8D5 /* Pods-AIM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIM.release.xcconfig"; path = "Pods/Target Support Files/Pods-AIM/Pods-AIM.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4092818840E7DF0515F23F6 /* Pods_AIM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,12 +98,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		375A29F861BCE858057FEFE9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				808112B8C3D0BA1224308929 /* Pods_AIM.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B133133A2046B77400D27AAE = {
 			isa = PBXGroup;
 			children = (
 				B13313452046B77400D27AAE /* AIM */,
 				B133135A2046B77500D27AAE /* AIMTests */,
 				B13313442046B77400D27AAE /* Products */,
+				F35F7FAD7E2C76E9665574C4 /* Pods */,
+				375A29F861BCE858057FEFE9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,7 +133,9 @@
 				B13313662046B7EB00D27AAE /* Domain */,
 				B17E91B32046C304005FD3B0 /* Presentation */,
 				B17E91B62046C335005FD3B0 /* UI */,
-				B13313462046B77400D27AAE /* AppDelegate.swift */,
+				B110F7C9204EC4FA005C0CDF /* AppDelegate.h */,
+				B110F7CA204EC4FA005C0CDF /* AppDelegate.m */,
+				B110F7CC204EC540005C0CDF /* Main.m */,
 				B133134D2046B77400D27AAE /* Assets.xcassets */,
 				B133134F2046B77400D27AAE /* LaunchScreen.storyboard */,
 				B13313522046B77400D27AAE /* Info.plist */,
@@ -100,7 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				B17E91B82046C365005FD3B0 /* Entities */,
-				B17E91B92046C371005FD3B0 /* Gateway Protocols */,
+				B13815FC204D5F48005C32C4 /* GatewayProtocol */,
 				B17E91BA2046C37C005FD3B0 /* UseCases */,
 			);
 			path = Domain;
@@ -109,9 +165,20 @@
 		B13313672046B7F200D27AAE /* Connectors */ = {
 			isa = PBXGroup;
 			children = (
-				B13313682046B80500D27AAE /* RootConnector.swift */,
+				B1228DDC204D9474009B6C1A /* TrackListConnector.h */,
+				B1228DDD204D9474009B6C1A /* TrackListConnector.m */,
+				B110F7C2204E9DEF005C0CDF /* RootConnector.h */,
+				B110F7C3204E9DEF005C0CDF /* RootConnector.m */,
 			);
 			path = Connectors;
+			sourceTree = "<group>";
+		};
+		B13815FC204D5F48005C32C4 /* GatewayProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				B110F7C5204E9FFB005C0CDF /* OnAirInfoGateway.h */,
+			);
+			path = GatewayProtocol;
 			sourceTree = "<group>";
 		};
 		B17E91B12046C2F2005FD3B0 /* Data */ = {
@@ -125,6 +192,8 @@
 		B17E91B22046C2F9005FD3B0 /* Gateways */ = {
 			isa = PBXGroup;
 			children = (
+				B110F7C6204EA047005C0CDF /* XMLOnAirInfoGateway.h */,
+				B110F7C7204EA048005C0CDF /* XMLOnAirInfoGateway.m */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
@@ -141,6 +210,8 @@
 		B17E91B42046C319005FD3B0 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				B1228DD9204D8F77009B6C1A /* TrackListPresenter.h */,
+				B1228DDA204D8F77009B6C1A /* TrackListPresenter.m */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -148,6 +219,7 @@
 		B17E91B52046C322005FD3B0 /* View Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				B1043338204C407800165A68 /* TrackListView.h */,
 			);
 			path = "View Protocols";
 			sourceTree = "<group>";
@@ -164,6 +236,12 @@
 		B17E91B72046C344005FD3B0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B1228DD3204D85D3009B6C1A /* StationInfoView.h */,
+				B1228DD4204D85D3009B6C1A /* StationInfoView.m */,
+				B1228DD0204D69A3009B6C1A /* TrackCell.h */,
+				B1228DD1204D69A3009B6C1A /* TrackCell.m */,
+				B1228DD6204D8DEA009B6C1A /* TrackListViewController.h */,
+				B1228DD7204D8DEA009B6C1A /* TrackListViewController.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -171,22 +249,34 @@
 		B17E91B82046C365005FD3B0 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				B1A70EB3204AA14500A759A6 /* OnAirInfo.h */,
+				B1FAA605204C20C600FACBA5 /* OnAirInfo.m */,
+				B1FAA607204C217300FACBA5 /* StationInfo.h */,
+				B1FAA608204C217300FACBA5 /* StationInfo.m */,
+				B1FAA60A204C225300FACBA5 /* Track.h */,
+				B1FAA60B204C225300FACBA5 /* Track.m */,
 			);
 			path = Entities;
-			sourceTree = "<group>";
-		};
-		B17E91B92046C371005FD3B0 /* Gateway Protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Gateway Protocols";
 			sourceTree = "<group>";
 		};
 		B17E91BA2046C37C005FD3B0 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				B1043339204C426300165A68 /* UseCaseFactory.h */,
+				B104333A204C426300165A68 /* UseCaseFactory.m */,
+				B104333C204C452800165A68 /* GetOnAirInfoUseCase.h */,
+				B104333D204C452800165A68 /* GetOnAirInfoUseCase.m */,
 			);
 			path = UseCases;
+			sourceTree = "<group>";
+		};
+		F35F7FAD7E2C76E9665574C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B720BCC55E1D9D3C04D7CC63 /* Pods-AIM.debug.xcconfig */,
+				F11410BEFA37E9267C26B8D5 /* Pods-AIM.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,9 +286,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B13313602046B77500D27AAE /* Build configuration list for PBXNativeTarget "AIM" */;
 			buildPhases = (
+				7ECC1BE588449F658816B172 /* [CP] Check Pods Manifest.lock */,
 				B133133F2046B77400D27AAE /* Sources */,
 				B13313402046B77400D27AAE /* Frameworks */,
 				B13313412046B77400D27AAE /* Resources */,
+				813F650665932BDD571D0738 /* [CP] Embed Pods Frameworks */,
+				7D36895D8D4FDC7D9075A81D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -239,6 +332,7 @@
 				TargetAttributes = {
 					B13313422046B77400D27AAE = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					B13313562046B77500D27AAE = {
@@ -286,13 +380,79 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7D36895D8D4FDC7D9075A81D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIM/Pods-AIM-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7ECC1BE588449F658816B172 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AIM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		813F650665932BDD571D0738 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AIM/Pods-AIM-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIM/Pods-AIM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B133133F2046B77400D27AAE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B13313692046B80500D27AAE /* RootConnector.swift in Sources */,
-				B13313472046B77400D27AAE /* AppDelegate.swift in Sources */,
+				B1FAA60C204C225300FACBA5 /* Track.m in Sources */,
+				B104333E204C452800165A68 /* GetOnAirInfoUseCase.m in Sources */,
+				B1FAA606204C20C600FACBA5 /* OnAirInfo.m in Sources */,
+				B1228DD5204D85D3009B6C1A /* StationInfoView.m in Sources */,
+				B1228DDB204D8F77009B6C1A /* TrackListPresenter.m in Sources */,
+				B110F7C8204EA048005C0CDF /* XMLOnAirInfoGateway.m in Sources */,
+				B1228DD2204D69A3009B6C1A /* TrackCell.m in Sources */,
+				B110F7CB204EC4FA005C0CDF /* AppDelegate.m in Sources */,
+				B110F7CD204EC540005C0CDF /* Main.m in Sources */,
+				B1228DDE204D9474009B6C1A /* TrackListConnector.m in Sources */,
+				B104333B204C426300165A68 /* UseCaseFactory.m in Sources */,
+				B1228DD8204D8DEA009B6C1A /* TrackListViewController.m in Sources */,
+				B110F7C4204E9DEF005C0CDF /* RootConnector.m in Sources */,
+				B1FAA609204C217300FACBA5 /* StationInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,14 +595,17 @@
 		};
 		B13313612046B77500D27AAE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B720BCC55E1D9D3C04D7CC63 /* Pods-AIM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 89T2GE89HD;
 				INFOPLIST_FILE = AIM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tooploox.AIM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -450,8 +613,10 @@
 		};
 		B13313622046B77500D27AAE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F11410BEFA37E9267C26B8D5 /* Pods-AIM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 89T2GE89HD;
 				INFOPLIST_FILE = AIM/Info.plist;
@@ -466,7 +631,6 @@
 		B13313642046B77500D27AAE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 89T2GE89HD;
@@ -483,7 +647,6 @@
 		B13313652046B77500D27AAE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 89T2GE89HD;
