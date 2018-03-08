@@ -24,7 +24,7 @@
 @property (nonatomic, strong) id<UseCaseProducing> useCaseFactory;
 @property (nonatomic, strong) OnAirInfo *onAirInfo;
 
-- (id)initWithConnector:(TrackListConnector *)connector useCaseFactory:(id<UseCaseProducing>)useCaseFactory;
+- (instancetype)initWithConnector:(TrackListConnector *)connector useCaseFactory:(id<UseCaseProducing>)useCaseFactory;
 - (int) numberOfTracks;
 - (void) configureCell: (TrackCell *) cell atIndex: (int) index;
 - (void) configureHeaderView: (StationInfoView *) headerView;

@@ -12,7 +12,7 @@
 
 @interface OnAirInfo : NSObject
 
--(id)initWithStationInfo:(StationInfo *)stationInfo tracks:(NSMutableArray *)tracks;
+-(instancetype)initWithStationInfo:(StationInfo *)stationInfo tracks:(NSMutableArray *)tracks;
 
 @property (nonatomic, strong) StationInfo *stationInfo;
 @property (nonatomic, strong) NSArray *tracks;

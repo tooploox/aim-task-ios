@@ -22,7 +22,7 @@
 
 @property (nonatomic, strong) id<OnAirInfoGateway> onAirInfoGateway;
 
-- (id) initWithOnAirInfoGateway:(id<OnAirInfoGateway>)onAirInfoGateway;
+- (instancetype) initWithOnAirInfoGateway:(id<OnAirInfoGateway>)onAirInfoGateway;
 - (GetOnAirInfoUseCase *)getOnAirInfoUseCase:(OnAirInfoCompletion)completion;
 
 @end

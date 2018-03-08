@@ -28,7 +28,7 @@
         [NSException raise:@"WindowIsNil" format:@"Window should be initialized"];
     }
     
-    self.rootConnector = [[RootConnector new] initInWindow:self.window];
+    self.rootConnector = [[RootConnector alloc] initInWindow:self.window];
 }
 
 @end

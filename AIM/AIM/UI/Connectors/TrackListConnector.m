@@ -22,7 +22,7 @@
 
 @implementation TrackListConnector
 
-- (id)initWithUseCaseFactory:(id<UseCaseProducing>)useCaseFactory {
+- (instancetype)initWithUseCaseFactory:(id<UseCaseProducing>)useCaseFactory {
     self = [super init];
     if (self != nil) {
         self.useCaseFactory = useCaseFactory;

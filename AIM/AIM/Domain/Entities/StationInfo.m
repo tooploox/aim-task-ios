@@ -12,7 +12,7 @@
 
 @synthesize description;
 
--(id)initWithName:(NSString *)name description:(NSString *)description time:(NSString *)time duration:(NSString *)duration presenter:(NSString *)presenter displayTime:(NSString *)displayTime imageURL:(NSURL *)imageURL {
+-(instancetype)initWithName:(NSString *)name description:(NSString *)description time:(NSString *)time duration:(NSString *)duration presenter:(NSString *)presenter displayTime:(NSString *)displayTime imageURL:(NSURL *)imageURL {
     self = [super init];
     if (self != nil) {
         self.name = name;
@@ -26,7 +26,7 @@
     return self;
 }
 
--(id)initWithAttributesDictionary:(NSDictionary<NSString *,NSString *> *)attributes {
+-(instancetype)initWithAttributesDictionary:(NSDictionary<NSString *,NSString *> *)attributes {
     if (attributes[@"name"] == nil) {
         return nil;
     }

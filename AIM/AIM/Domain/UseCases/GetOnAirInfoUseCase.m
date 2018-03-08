@@ -10,7 +10,7 @@
 
 @implementation GetOnAirInfoUseCase
 
-- (id) initWithGateway:(id<OnAirInfoGateway>)gateway completion:(OnAirInfoCompletion)completion {
+- (instancetype) initWithGateway:(id<OnAirInfoGateway>)gateway completion:(OnAirInfoCompletion)completion {
     self = [super init];
     if (self != nil) {
         self.gateway = gateway;

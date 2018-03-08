@@ -16,7 +16,7 @@
 
 @property (nonatomic, strong) id<OnAirInfoGateway> gateway;
 
-- (id) initWithGateway:(id<OnAirInfoGateway>)gateway completion:(OnAirInfoCompletion)completion;
+- (instancetype) initWithGateway:(id<OnAirInfoGateway>)gateway completion:(OnAirInfoCompletion)completion;
 - (void) execute;
 
 @end

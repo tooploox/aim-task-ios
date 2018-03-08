@@ -21,7 +21,7 @@
 @property (nonatomic, strong) NSString *stationDisplayTime;
 @property (nonatomic, strong) NSURL *stationImageURL;
 @property (nonatomic, strong) StationInfo *stationInfo;
-@property (nonatomic, strong) NSMutableArray *tracks;
+@property (nonatomic, strong) NSMutableArray<Track *> *tracks;
 @property (nonatomic, strong) Track *track;
 @property (nonatomic, strong) OnAirInfo *onAirInfo;
 

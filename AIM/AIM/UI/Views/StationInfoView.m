@@ -21,7 +21,7 @@
 
 @implementation StationInfoView
 
--(id)initWithFrame:(CGRect)frame {
+-(instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:CGRectZero];
     [self setupView];
     return self;
@@ -30,9 +30,9 @@
 -(void)setupView {
     self.backgroundColor = [UIColor whiteColor];
     [self setupSeparator];
-        [self setupImageView];
-        [self setupNameLabel];
-        [self setupDescriptionLabel];
+    [self setupImageView];
+    [self setupNameLabel];
+    [self setupDescriptionLabel];
 }
 
 -(void)setupSeparator {

@@ -10,21 +10,13 @@
 
 #import "TrackCell.h"
 
-@interface TrackListViewController () {
-    
-    UITableView *tableView;
-    
-}
-
-@end
-
 @implementation TrackListViewController
 
 static NSString *cellIdentifier = @"TrackCell";
 static CGFloat rowHeight = 90.0;
 
 
-- (id)initWithPresenter:(TrackListPresenter *)presenter {
+- (instancetype)initWithPresenter:(TrackListPresenter *)presenter {
     self = [super init];
 
     if (self != nil) {
@@ -47,18 +39,18 @@ static CGFloat rowHeight = 90.0;
 }
 
 - (void)setupTableView {
-    tableView = [UITableView new];
-    tableView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addSubview:tableView];
+    self.tableView = [UITableView new];
+    self.tableView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:self.tableView];
     [self.view addConstraints:@[
-                           [tableView.topAnchor constraintEqualToAnchor:self.view.topAnchor],
-                           [tableView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor],
-                           [tableView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor],
-                           [tableView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor]
+                           [self.tableView.topAnchor constraintEqualToAnchor:self.view.topAnchor],
+                           [self.tableView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor],
+                           [self.tableView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor],
+                           [self.tableView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor]
     ]];
-    tableView.dataSource = self;
-    tableView.delegate = self;
-    [tableView registerClass:[TrackCell self] forCellReuseIdentifier:cellIdentifier];
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    [self.tableView registerClass:[TrackCell self] forCellReuseIdentifier:cellIdentifier];
 }
 
 // MARK: - UITableViewDelegate
@@ -99,7 +91,7 @@ static CGFloat rowHeight = 90.0;
 // MARK: - TrackListView
 
 - (void) refreshView {
-    [tableView reloadData];
+    [self.tableView reloadData];
 }
 
 - (void) fetchOnAirInfo {

@@ -12,6 +12,11 @@
 
 @interface TrackCell : UITableViewCell {}
 
+@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UILabel *artistLabel;
+@property (nonatomic, strong) UIImageView *coverImageView;
+@property (nonatomic, strong) UILabel *durationLabel;
+
 - (void) displayImage: (NSURL *) URL;
 - (void) displayTitle: (NSString *) title;
 - (void) displayArtist: (NSString *) artist;

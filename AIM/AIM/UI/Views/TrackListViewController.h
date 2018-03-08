@@ -14,9 +14,10 @@
 
 @interface TrackListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, TrackListView> {}
 
-@property TrackListPresenter *presenter;
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) TrackListPresenter *presenter;
 
-- (id)initWithPresenter:(TrackListPresenter *)presenter;
+- (instancetype)initWithPresenter:(TrackListPresenter *)presenter;
 - (void) refreshView;
 
 @end

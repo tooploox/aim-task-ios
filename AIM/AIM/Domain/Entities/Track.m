@@ -10,7 +10,7 @@
 
 @implementation Track
 
--(id)initWithAttributesDictionary:(NSDictionary<NSString *,NSString *> *)attributes {
+-(instancetype)initWithAttributesDictionary:(NSDictionary<NSString *,NSString *> *)attributes {
     if (attributes[@"title"] == nil) {
         return nil;
     }

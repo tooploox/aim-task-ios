@@ -18,7 +18,7 @@
 @property (nonatomic, strong) NSString *displayTime;
 @property (nonatomic, strong) NSURL *imageURL;
 
--(id)initWithName:(NSString *)name description:(NSString *)description time:(NSString *)time duration:(NSString *)duration presenter:(NSString *)presenter displayTime:(NSString *)displayTime imageURL:(NSURL *)imageURL;
--(id)initWithAttributesDictionary:(NSDictionary<NSString *,NSString *> *)attributes;
+-(instancetype)initWithName:(NSString *)name description:(NSString *)description time:(NSString *)time duration:(NSString *)duration presenter:(NSString *)presenter displayTime:(NSString *)displayTime imageURL:(NSURL *)imageURL;
+-(instancetype)initWithAttributesDictionary:(NSDictionary<NSString *,NSString *> *)attributes;
 
 @end

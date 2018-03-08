@@ -10,13 +10,13 @@
 
 @implementation XMLOnAirInfoGateway
 
-- (id)init {
+- (instancetype)init {
     self = [super init];
     if (self != nil) {
-        self.parser = [[NSXMLParser new] initWithContentsOfURL: [[NSURL alloc] initWithString: @"http://aim.appdata.abc.net.au.edgesuite.net/data/abc/triplej/onair.xml"]];
+        self.parser = [[NSXMLParser alloc] initWithContentsOfURL: [[NSURL alloc] initWithString: @"http://aim.appdata.abc.net.au.edgesuite.net/data/abc/triplej/onair.xml"]];
         self.parser.delegate = self;
-        self.tracks = [[NSMutableArray alloc] init];
-        self.stationDisplayTime = [NSString new];
+        self.tracks = [NSMutableArray new];
+        self.stationDisplayTime = @"";
     };
     return self;
 }
@@ -55,13 +55,13 @@
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser; {
     if (self.stationInfo == nil || self.stationDisplayTime == nil || self.stationImageURL == nil) {
-        self.onAirInfo = [[OnAirInfo new] initWithStationInfo:self.stationInfo tracks:self.tracks];
+        self.onAirInfo = [[OnAirInfo alloc] initWithStationInfo:self.stationInfo tracks:self.tracks];
         self.onAirInfoCompletion(self.onAirInfo);
         return;
 
     }
     self.stationInfo = [[StationInfo new] initWithName:self.stationInfo.name description:self.stationInfo.description time:self.stationInfo.time duration: self.stationInfo.duration presenter:self.stationInfo.presenter displayTime:self.stationDisplayTime imageURL:self.stationImageURL];
-    self.onAirInfo = [[OnAirInfo new] initWithStationInfo:self.stationInfo tracks: self.tracks];
+    self.onAirInfo = [[OnAirInfo alloc] initWithStationInfo:self.stationInfo tracks: self.tracks];
     self.onAirInfoCompletion(self.onAirInfo);
 }
 

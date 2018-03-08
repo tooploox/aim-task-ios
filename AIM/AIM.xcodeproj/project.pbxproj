@@ -70,7 +70,6 @@
 		B133135B2046B77500D27AAE /* AIMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIMTests.swift; sourceTree = "<group>"; };
 		B133135D2046B77500D27AAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1A70EB3204AA14500A759A6 /* OnAirInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnAirInfo.h; sourceTree = "<group>"; };
-		B1FAA604204C20C600FACBA5 /* AIM-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AIM-Bridging-Header.h"; sourceTree = "<group>"; };
 		B1FAA605204C20C600FACBA5 /* OnAirInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OnAirInfo.m; sourceTree = "<group>"; };
 		B1FAA607204C217300FACBA5 /* StationInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StationInfo.h; sourceTree = "<group>"; };
 		B1FAA608204C217300FACBA5 /* StationInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StationInfo.m; sourceTree = "<group>"; };
@@ -137,7 +136,6 @@
 				B110F7C9204EC4FA005C0CDF /* AppDelegate.h */,
 				B110F7CA204EC4FA005C0CDF /* AppDelegate.m */,
 				B110F7CC204EC540005C0CDF /* Main.m */,
-				B1FAA604204C20C600FACBA5 /* AIM-Bridging-Header.h */,
 				B133134D2046B77400D27AAE /* Assets.xcassets */,
 				B133134F2046B77400D27AAE /* LaunchScreen.storyboard */,
 				B13313522046B77400D27AAE /* Info.plist */,
@@ -607,7 +605,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tooploox.AIM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "AIM/AIM-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -626,7 +623,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tooploox.AIM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "AIM/AIM-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

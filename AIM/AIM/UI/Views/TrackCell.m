@@ -8,32 +8,23 @@
 
 #import "TrackCell.h"
 
-@interface TrackCell () {
-    
-    UILabel *titleLabel;
-    UILabel *artistLabel;
-    UIImageView *coverImageView;
-    UILabel *durationLabel;
-    
-}
-
-@end
-
 @implementation TrackCell
 
--(id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    self.selectionStyle = UITableViewCellSelectionStyleNone;
-    [self setupView];
+    if (self != nil) {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        [self setupView];
+    }
     return self;
 }
 
 -(void)prepareForReuse {
     [super prepareForReuse];
-    coverImageView = nil;
-    titleLabel.text = nil;
-    artistLabel.text = nil;
-    durationLabel.text = nil;
+    self.coverImageView = nil;
+    self.titleLabel.text = nil;
+    self.artistLabel.text = nil;
+    self.durationLabel.text = nil;
 }
 
 -(void)setupView {
@@ -44,63 +35,63 @@
 }
 
 -(void)setupCoverImageView {
-    coverImageView = [UIImageView new];
-    coverImageView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.contentView addSubview:coverImageView];
+    self.coverImageView = [UIImageView new];
+    self.coverImageView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.contentView addSubview:self.coverImageView];
     [self addConstraints:@[
-                                             [coverImageView.topAnchor constraintEqualToAnchor:self.contentView.topAnchor constant:5.0],
-                                             [coverImageView.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:5.0],
-                                             [coverImageView.heightAnchor constraintEqualToConstant:80.0],
-                                             [coverImageView.widthAnchor constraintEqualToConstant:80.0]
+                                             [self.coverImageView.topAnchor constraintEqualToAnchor:self.contentView.topAnchor constant:5.0],
+                                             [self.coverImageView.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:5.0],
+                                             [self.coverImageView.heightAnchor constraintEqualToConstant:80.0],
+                                             [self.coverImageView.widthAnchor constraintEqualToConstant:80.0]
     ]];
 }
 
 -(void)setupTitleLabel {
-    titleLabel = [UILabel new];
-    titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.contentView addSubview:titleLabel];
+    self.titleLabel = [UILabel new];
+    self.titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.contentView addSubview:self.titleLabel];
     [self addConstraints:@[
-                           [titleLabel.topAnchor constraintEqualToAnchor:self.contentView.topAnchor constant:5.0],
-                           [titleLabel.leadingAnchor constraintEqualToAnchor:coverImageView.trailingAnchor constant:10.0],
-                           [titleLabel.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor constant:-5.0]
+                           [self.titleLabel.topAnchor constraintEqualToAnchor:self.contentView.topAnchor constant:5.0],
+                           [self.titleLabel.leadingAnchor constraintEqualToAnchor:self.coverImageView.trailingAnchor constant:10.0],
+                           [self.titleLabel.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor constant:-5.0]
     ]];
 }
 
 -(void)setupArtistLabel {
-    artistLabel = [UILabel new];
-    artistLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.contentView addSubview:artistLabel];
+    self.artistLabel = [UILabel new];
+    self.artistLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.contentView addSubview:self.artistLabel];
     [self addConstraints:@[
-                           [artistLabel.topAnchor constraintEqualToAnchor:titleLabel.bottomAnchor constant:5.0],
-                           [artistLabel.leadingAnchor constraintEqualToAnchor:titleLabel.leadingAnchor],
-                           [artistLabel.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor constant: -5.0]
+                           [self.artistLabel.topAnchor constraintEqualToAnchor:self.titleLabel.bottomAnchor constant:5.0],
+                           [self.artistLabel.leadingAnchor constraintEqualToAnchor:self.titleLabel.leadingAnchor],
+                           [self.artistLabel.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor constant: -5.0]
     ]];
 }
 
 -(void)setupDurationLabel {
-    durationLabel = [UILabel new];
-    durationLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.contentView addSubview:durationLabel];
+    self.durationLabel = [UILabel new];
+    self.durationLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.contentView addSubview:self.durationLabel];
     [self addConstraints:@[
-                           [durationLabel.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor constant:-5.0],
-                           [durationLabel.bottomAnchor constraintEqualToAnchor:self.contentView.bottomAnchor constant:-5.0]
+                           [self.durationLabel.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor constant:-5.0],
+                           [self.durationLabel.bottomAnchor constraintEqualToAnchor:self.contentView.bottomAnchor constant:-5.0]
     ]];
 }
 
 - (void) displayImage: (NSURL *) URL {
-    [coverImageView sd_setImageWithURL:URL];
+    [self.coverImageView sd_setImageWithURL:URL];
 }
 
 - (void) displayTitle: (NSString *) title {
-    titleLabel.text = title;
+    self.titleLabel.text = title;
 }
 
 - (void) displayArtist: (NSString *) artist {
-    artistLabel.text = artist;
+    self.artistLabel.text = artist;
 }
 
 - (void) displayDuration: (NSString *) duration {
-    durationLabel.text = duration;
+    self.durationLabel.text = duration;
 }
 
 @end

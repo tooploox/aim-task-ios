@@ -10,7 +10,7 @@
 
 @interface Track : NSObject
 
--(id)initWithAttributesDictionary:(NSDictionary<NSString *,NSString *> *)attributes;
+-(instancetype)initWithAttributesDictionary:(NSDictionary<NSString *,NSString *> *)attributes;
 
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *artist;

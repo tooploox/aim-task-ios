@@ -15,7 +15,7 @@
 
 @implementation TrackListPresenter
 
-- (id)initWithConnector:(TrackListConnector *)connector useCaseFactory:(id<UseCaseProducing>)useCaseFactory {
+- (instancetype)initWithConnector:(TrackListConnector *)connector useCaseFactory:(id<UseCaseProducing>)useCaseFactory {
     self = [super init];
     if (self != nil) {
         self.connector = connector;
@@ -50,12 +50,11 @@
 }
 
 - (void) configureHeaderView: (StationInfoView *) headerView {
-    if (self.onAirInfo == nil ||self.onAirInfo.stationInfo == nil) {
+    if (self.onAirInfo == nil || self.onAirInfo.stationInfo == nil) {
         return;
     }
     if (self.onAirInfo.stationInfo.imageURL != nil) {
         [headerView displayImage:self.onAirInfo.stationInfo.imageURL];
-    } else {
     }
 
     [headerView displayName:self.onAirInfo.stationInfo.name];
@@ -64,7 +63,6 @@
 
 - (Boolean) shouldDisplayHeader {
     return self.onAirInfo.stationInfo != nil;
-
 }
 
 - (void) fetchOnAirInfo {
