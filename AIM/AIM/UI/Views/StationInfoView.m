@@ -8,17 +8,6 @@
 
 #import "StationInfoView.h"
 
-@interface StationInfoView () {
-    
-    UILabel *nameLabel;
-    UILabel *descriptionLabel;
-    UIImageView *imageView;
-    UIView *separator;
-
-}
-
-@end
-
 @implementation StationInfoView
 
 -(instancetype)initWithFrame:(CGRect)frame {
@@ -36,65 +25,65 @@
 }
 
 -(void)setupSeparator {
-    separator = [UIView new];
-    separator.translatesAutoresizingMaskIntoConstraints = NO;
-    [self addSubview:separator];
+    self.separator = [UIView new];
+    self.separator.translatesAutoresizingMaskIntoConstraints = NO;
+    [self addSubview:self.separator];
     [self addConstraints:@[
-                           [separator.leadingAnchor constraintEqualToAnchor:self.leadingAnchor],
-                           [separator.trailingAnchor constraintEqualToAnchor:self.trailingAnchor],
-                           [separator.bottomAnchor constraintEqualToAnchor:self.bottomAnchor],
-                           [separator.heightAnchor constraintEqualToConstant:5.0]
+                           [self.separator.leadingAnchor constraintEqualToAnchor:self.leadingAnchor],
+                           [self.separator.trailingAnchor constraintEqualToAnchor:self.trailingAnchor],
+                           [self.separator.bottomAnchor constraintEqualToAnchor:self.bottomAnchor],
+                           [self.separator.heightAnchor constraintEqualToConstant:5.0]
     ]];
-    separator.backgroundColor = [UIColor grayColor];
+    self.separator.backgroundColor = [UIColor grayColor];
 }
 
 -(void)setupImageView {
-    imageView = [UIImageView new];
-    imageView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self addSubview:imageView];
+    self.imageView = [UIImageView new];
+    self.imageView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self addSubview:self.imageView];
     [self addConstraints:@[
-                           [imageView.topAnchor constraintEqualToAnchor:self.topAnchor constant:5.0],
-                           [imageView.leadingAnchor constraintEqualToAnchor:self.leadingAnchor constant:5.0],
-                           [imageView.heightAnchor constraintEqualToConstant:80.0],
-                           [imageView.widthAnchor constraintEqualToConstant:80.0]
+                           [self.imageView.topAnchor constraintEqualToAnchor:self.topAnchor constant:5.0],
+                           [self.imageView.leadingAnchor constraintEqualToAnchor:self.leadingAnchor constant:5.0],
+                           [self.imageView.heightAnchor constraintEqualToConstant:80.0],
+                           [self.imageView.widthAnchor constraintEqualToConstant:80.0]
     ]];
-    imageView.contentMode = UIViewContentModeScaleAspectFit;
+    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
 }
 
 -(void)setupNameLabel {
-    nameLabel = [UILabel new];
-    nameLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    [self addSubview:nameLabel];
+    self.nameLabel = [UILabel new];
+    self.nameLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    [self addSubview:self.nameLabel];
     [self addConstraints:@[
-                           [nameLabel.topAnchor constraintEqualToAnchor:self.topAnchor constant:5.0],
-                           [nameLabel.leadingAnchor constraintEqualToAnchor:imageView.trailingAnchor constant: 10.0]
+                           [self.nameLabel.topAnchor constraintEqualToAnchor:self.topAnchor constant:5.0],
+                           [self.nameLabel.leadingAnchor constraintEqualToAnchor:self.imageView.trailingAnchor constant: 10.0]
     ]];
 }
 
 -(void)setupDescriptionLabel {
-    descriptionLabel = [UILabel new];
-    descriptionLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    [self addSubview:descriptionLabel];
+    self.descriptionLabel = [UILabel new];
+    self.descriptionLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    [self addSubview:self.descriptionLabel];
     [self addConstraints:@[
-                           [descriptionLabel.topAnchor constraintEqualToAnchor:nameLabel.bottomAnchor constant:10.0],
-                           [descriptionLabel.leadingAnchor constraintEqualToAnchor:nameLabel.leadingAnchor],
-                           [descriptionLabel.trailingAnchor constraintEqualToAnchor:self.trailingAnchor constant:-5.0],
-                           [descriptionLabel.bottomAnchor constraintEqualToAnchor:separator.topAnchor],
+                           [self.descriptionLabel.topAnchor constraintEqualToAnchor:self.nameLabel.bottomAnchor constant:10.0],
+                           [self.descriptionLabel.leadingAnchor constraintEqualToAnchor:self.nameLabel.leadingAnchor],
+                           [self.descriptionLabel.trailingAnchor constraintEqualToAnchor:self.trailingAnchor constant:-5.0],
+                           [self.descriptionLabel.bottomAnchor constraintEqualToAnchor:self.separator.topAnchor],
     ]];
-    descriptionLabel.numberOfLines = 0;
+    self.descriptionLabel.numberOfLines = 0;
 }
 
 - (void) displayImage: (NSURL *) URL {
     NSData * imageData = [[NSData alloc] initWithContentsOfURL: URL];
-    [imageView setImage: [UIImage imageWithData:imageData]];
+    [self.imageView setImage: [UIImage imageWithData:imageData]];
 }
 
 - (void) displayName: (NSString *) name {
-    nameLabel.text = name;
+    self.nameLabel.text = name;
 }
 
 - (void) displayDescription: (NSString *) description {
-    descriptionLabel.text = description;
+    self.descriptionLabel.text = description;
 }
 
 @end

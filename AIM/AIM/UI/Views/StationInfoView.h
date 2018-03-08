@@ -11,6 +11,11 @@
 
 @interface StationInfoView : UIView {}
 
+@property (nonatomic, strong) UILabel *nameLabel;
+@property (nonatomic, strong) UILabel *descriptionLabel;
+@property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, strong) UIView *separator;
+
 - (void) displayImage: (NSURL *) URL;
 - (void) displayName: (NSString *) name;
 - (void) displayDescription: (NSString *) description;
