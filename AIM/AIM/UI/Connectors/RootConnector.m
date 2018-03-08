@@ -7,25 +7,14 @@
 //
 
 #import "RootConnector.h"
-#import "TrackListConnector.h"
 #import "XMLOnAirInfoGateway.h"
-
-@interface RootConnector () {
-    
-    UIWindow *window;
-    TrackListConnector *connector;
-    UIViewController *viewController;
-    
-}
-
-@end
 
 @implementation RootConnector
 
 - (instancetype)initInWindow:(UIWindow *)window; {
     self = [super init];
     if (self != nil) {
-        self->window = window;
+        self.window = window;
     }
     
     [self showTrackListView];
@@ -34,16 +23,16 @@
 }
 
 - (void)showTrackListView {
-    connector = [[TrackListConnector new] initWithUseCaseFactory: [[UseCaseFactory new] initWithOnAirInfoGateway: [[XMLOnAirInfoGateway new] init]]];
+    self.connector = [[TrackListConnector new] initWithUseCaseFactory: [[UseCaseFactory new] initWithOnAirInfoGateway: [[XMLOnAirInfoGateway new] init]]];
                                                                    
-    viewController = [connector trackListViewController];
-    [self changeWindowRootViewControllerWithAnimation:viewController];
+    self.viewController = [self.connector trackListViewController];
+    [self changeWindowRootViewControllerWithAnimation:self.viewController];
 }
 
 - (void)changeWindowRootViewControllerWithAnimation: (UIViewController *)viewController {
-    [UIView transitionWithView:window duration:0.4 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
-        [self->window addSubview:viewController.view];
-        [self->window setRootViewController:viewController];
+    [UIView transitionWithView:self.window duration:0.4 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
+        [self.window addSubview:viewController.view];
+        [self.window setRootViewController:viewController];
     } completion:nil];
 }
 

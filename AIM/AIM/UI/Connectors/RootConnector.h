@@ -9,7 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#import "TrackListConnector.h"
+
 @interface RootConnector : NSObject {}
+
+@property(nonatomic, strong) UIWindow *window;
+@property(nonatomic, strong) TrackListConnector *connector;
+@property(nonatomic, strong) UIViewController *viewController;
 
 - (instancetype)initInWindow:(UIWindow *)window;
 
